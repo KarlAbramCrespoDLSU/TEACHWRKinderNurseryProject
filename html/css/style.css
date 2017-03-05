@@ -1,0 +1,79 @@
+/*
+	TEACHWR S21 AY 2016-2017 TERM 2
+
+	Chingcuangco, Rene Jeric
+	Crespo, Karl Crespo
+	Cruz, Beatriz Francesca
+
+
+	I'll make you beautiful, html. -css
+	
+	
+	Color Palette:
+	#f3f3f3 White Background
+	#556371	Dark Blue Gray
+	#5AC4BE	Turquoise Blue
+	#CBDC66 Lime Green
+	#F26B6C Salmon Pink 
+	#C64D67 Dark Red
+	
+*/
+
+
+body {
+	background-color: #f3f3f3;	
+}
+
+#centerBlock {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10%;
+	height: 500px;
+	width: 50%;
+}
+
+#alphabetButton {
+	padding: 8%;
+	width: 30%;
+	height: 30%;
+	background-color: #C64D67;
+	
+	font-family: Arial;
+	font-weight: Bold;
+	font-size: 50px;
+	color: #ffffff;
+	
+	float: left;
+	
+	border-radius: 10px;
+	
+	transition: all 0.5s ease;
+}
+
+#alphabetButton:hover{
+	background-color: #F26B6C;
+	transition: all 0.5s ease;
+}
+
+#countingButton {
+	padding: 8%;
+	width: 30%;
+	height: 30%;
+	background-color: #C64D67;
+	
+	font-family: Arial;
+	font-weight: Bold;
+	font-size: 50px;
+	color: #ffffff;
+	
+	float: right;
+	
+	border-radius: 10px;
+	
+	transition: all 0.5s ease;
+}
+
+#countingButton:hover{
+	background-color: #F26B6C;
+	transition: all 0.5s ease;
+}

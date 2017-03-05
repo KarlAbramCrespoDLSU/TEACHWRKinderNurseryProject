@@ -1,0 +1,53 @@
+/*
+	TEACHWR S21 AY 2016-2017 TERM 2
+
+	Chingcuangco, Rene Jeric
+	Crespo, Karl Crespo
+	Cruz, Beatriz Francesca
+
+
+	I'll make you beautiful, html. -css
+	
+	
+	Color Palette:
+	#f3f3f3 White Background
+	#556371	Dark Blue Gray
+	#5AC4BE	Turquoise Blue
+	#CBDC66 Lime Green
+	#F26B6C Salmon Pink 
+	#C64D67 Dark Red
+	
+*/
+
+
+body {
+	background-color: #f3f3f3;	
+}
+
+#controlBar {
+	width: 100%;
+	height: 10%;
+	bottom: 0%;
+	position: fixed;
+	background-color: black;
+}
+
+#effectControlsWrapper{
+	width: 30%;
+	height: 100%;
+	background-color: gray;
+	float: left;
+}
+
+.effectButton {
+	height: 100%;
+	width: 100%;
+	background-color: #C64D67;
+}
+
+#navigationControlsWrapper{
+	width: 20%;
+	height: 100%;
+	background-color: gray;
+	float: right;`
+}
