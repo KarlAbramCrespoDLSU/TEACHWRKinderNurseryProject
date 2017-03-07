@@ -29,6 +29,7 @@ body {
 /* Controls */
 
 #menuButtonWrapper{
+
 	left: 0%;
 	height: 30px;
 	width: 30px;
@@ -62,9 +63,11 @@ body {
 	height: 5%;
 	bottom: 5%;
 	position: fixed;
+	margin-left: 1%;
 }
 
 #effectControlsWrapper{
+
 	width: 200px;
 	height: 100%;
 	float: left;
@@ -122,8 +125,29 @@ body {
 /* Controls END */
 
 #contentWrapper{
-	margin: 5%;
-	height: 100%;
-	width: 100%;
+	padding: 5%;
+	height: 90%;
+	width: 90%;
 }
 
+#imageSlideshow{
+	background-color: black;
+	float: left;
+	height: 100%;
+	width: 50%;
+}
+
+#letterContainer{
+	float: right;
+	height: 100%;
+	width: 50%;
+}
+
+#letterContainer .bigText{
+	color: #5AC4BE;
+	font-size: 35vw;
+	font-family: Arial;
+	font-weight: bold;
+	line-height: 90%;
+	margin-left: 30%;
+}

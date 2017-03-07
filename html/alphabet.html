@@ -15,7 +15,10 @@ Cruz, Beatriz Francesca
 	<head>
 		<title>TEACHWR</title> <!--Give a good name please-->
 		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/w3.css" />
 		<link rel = "stylesheet" href = "css/alphabetStyle.css" />
+		<script src = "js/slideshow.js"></script>
 	</head>
 	<body>
 		
@@ -37,7 +40,17 @@ Cruz, Beatriz Francesca
 		
 		<div id = "contentWrapper">
 			<!-- Insert Code here -->
-			Content Etc.
+			<div id = "imageSlideshow" class = "w3-content w3-display-container">
+				<img class="mySlides" src="img/slideshow/sample/img1.jpg" style="width:100%">
+				<img class="mySlides" src="img/slideshow/sample/img2.jpg" style="width:100%">
+				<img class="mySlides" src="img/slideshow/sample/img3.jpg" style="width:100%">
+			
+				<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+				<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+			</div>
+			<div id = "letterContainer">
+				<span class = "bigText">A</span>
+			</div>
 		</div>
 	
 	</body>
