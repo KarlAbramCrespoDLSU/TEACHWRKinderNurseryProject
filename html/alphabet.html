@@ -16,9 +16,10 @@ Cruz, Beatriz Francesca
 		<title>TEACHWR</title> <!--Give a good name please-->
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src = "js/jquery-3.1.1.min.js"></script>
 		<link rel="stylesheet" href="css/w3.css" />
 		<link rel = "stylesheet" href = "css/alphabetStyle.css" />
-		<script src = "js/slideshow.js"></script>
+		
 	</head>
 	<body>
 		
@@ -28,30 +29,1156 @@ Cruz, Beatriz Francesca
 	
 		<div id = "controlBar">
 			<div id = "effectControlsWrapper">
-				<a href = "#" class = "effectButton" ><img src="img/controlIcons/speak.png" /></a>
-				<a href = "#" class = "effectButton" ><img src="img/controlIcons/pictures.png" /></a>
-				<a href = "#" class = "effectButton" ><img src="img/controlIcons/case.png" /></a>
+				<button class = "effectButton" ><img src="img/controlIcons/speak.png" /></a>
+				<button class = "effectButton" ><img src="img/controlIcons/pictures.png" /></a>
+				<button class = "effectButton" ><img src="img/controlIcons/case.png" /></a>
 			</div>
 			<div id = "navigationControlsWrapper">
-				<a href = "#" class = "navigationButton" ><img src="img/controlIcons/leftArrow.png" /></a>
-				<a href = "#" class = "navigationButton" ><img src="img/controlIcons/rightArrow.png" /></a>
+				<button class = "navigationButton" onclick = "decrementLetter()"><img src="img/controlIcons/leftArrow.png" /></a>
+				<button class = "navigationButton" onclick = "incrementLetter()"><img src="img/controlIcons/rightArrow.png" /></a>
 			</div>
 		</div>
 		
 		<div id = "contentWrapper">
 			<!-- Insert Code here -->
-			<div id = "imageSlideshow" class = "w3-content w3-display-container">
-				<img class="mySlides" src="img/slideshow/sample/img1.jpg" style="width:100%">
-				<img class="mySlides" src="img/slideshow/sample/img2.jpg" style="width:100%">
-				<img class="mySlides" src="img/slideshow/sample/img3.jpg" style="width:100%">
-			
+			<div id = "aImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
+				<img class="aPics" src="img/alphabetWords/a/ant.png" style="width:100%">
+				<img class="aPics" src="img/alphabetWords/a/apple.png" style="width:100%">
+				<img class="aPics" src="img/alphabetWords/a/atis.png" style="width:100%">
+				
+				
 				<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
 				<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
 			</div>
+			
+			<div id = "bImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
+				<img class="bPics" src="img/alphabetWords/b/ball.png" style="width:100%">
+				<img class="bPics" src="img/alphabetWords/b/boat.png" style="width:100%">
+				<img class="bPics" src="img/alphabetWords/b/boy.png" style="width:100%">
+				
+				
+				<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+				<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+			</div>
+			
+			<div id = "cImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
+				<img class="cPics" src="img/alphabetWords/c/car.png" style="width:100%">
+				<img class="cPics" src="img/alphabetWords/c/cat.png" style="width:100%">
+				<img class="cPics" src="img/alphabetWords/c/cow.png" style="width:100%">
+				
+				
+				<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+				<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+			</div>
+			
+			<div id = "dImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
+				<img class="dPics" src="img/alphabetWords/d/dog.png" style="width:100%">
+				<img class="dPics" src="img/alphabetWords/d/dress.png" style="width:100%">
+				<img class="dPics" src="img/alphabetWords/d/duck.png" style="width:100%">
+				
+				
+				<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+				<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+			</div>
+			
+			<div id = "eImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
+				<img class="ePics" src="img/alphabetWords/e/eagle.png" style="width:100%">
+				<img class="ePics" src="img/alphabetWords/e/egg.png" style="width:100%">
+				<img class="ePics" src="img/alphabetWords/e/eye.png" style="width:100%">
+				
+				
+				<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+				<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+			</div>
+			
+			<div id = "fImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
+				<img class="fPics" src="img/alphabetWords/f/fan.png" style="width:100%">
+				<img class="fPics" src="img/alphabetWords/f/fish.png" style="width:100%">
+				<img class="fPics" src="img/alphabetWords/f/flower.png" style="width:100%">
+				
+				
+				<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+				<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+			</div>
+			
+			<div id = "gImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
+				<img class="gPics" src="img/alphabetWords/g/girl.png" style="width:100%">
+				<img class="gPics" src="img/alphabetWords/g/glass.png" style="width:100%">
+				<img class="gPics" src="img/alphabetWords/g/grapes.png" style="width:100%">
+				
+				
+				<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+				<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+			</div>
+			
+			<div id = "hImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
+				<img class="hPics" src="img/alphabetWords/h/hat.png" style="width:100%">
+				<img class="hPics" src="img/alphabetWords/h/horse.png" style="width:100%">
+				<img class="hPics" src="img/alphabetWords/h/house.png" style="width:100%">
+				
+				
+				<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+				<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+			</div>
+			
+			<div id = "iImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
+				<img class="iPics" src="img/alphabetWords/i/ice.png" style="width:100%">
+				<img class="iPics" src="img/alphabetWords/i/ink.png" style="width:100%">
+				<img class="iPics" src="img/alphabetWords/i/island.png" style="width:100%">
+				
+				
+				<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+				<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+			</div>
+			
+			<div id = "jImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
+				<img class="jPics" src="img/alphabetWords/j/jacket.png" style="width:100%">
+				<img class="jPics" src="img/alphabetWords/j/jellyfish.png" style="width:100%">
+				<img class="jPics" src="img/alphabetWords/j/juice.png" style="width:100%">
+				
+				
+				<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+				<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+			</div>
+			
+			<div id = "kImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
+				<img class="kPics" src="img/alphabetWords/k/kettle.png" style="width:100%">
+				<img class="kPics" src="img/alphabetWords/k/key.png" style="width:100%">
+				<img class="kPics" src="img/alphabetWords/k/kite.png" style="width:100%">
+				
+				
+				<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+				<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+			</div>
+			
+			<div id = "lImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
+				<img class="lPics" src="img/alphabetWords/l/leaf.png" style="width:100%">
+				<img class="lPics" src="img/alphabetWords/l/lemon.png" style="width:100%">
+				<img class="lPics" src="img/alphabetWords/l/lion.png" style="width:100%">
+				
+				
+				<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+				<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+			</div>
+			
+			<div id = "mImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
+				<img class="mPics" src="img/alphabetWords/m/moon.png" style="width:100%">
+				<img class="mPics" src="img/alphabetWords/m/mouse.png" style="width:100%">
+				
+				
+				<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+				<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+			</div>
+			
+			<div id = "nImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
+				<img class="nPics" src="img/alphabetWords/n/noodles.png" style="width:100%">
+				<img class="nPics" src="img/alphabetWords/n/notebook.png" style="width:100%">
+				<img class="nPics" src="img/alphabetWords/n/nut.png" style="width:100%">
+				
+				
+				<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+				<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+			</div>
+			
+			<div id = "oImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
+				<img class="oPics" src="img/alphabetWords/o/octopus.png" style="width:100%">
+				<img class="oPics" src="img/alphabetWords/o/onion.png" style="width:100%">
+				<img class="oPics" src="img/alphabetWords/o/orange.png" style="width:100%">
+				
+				
+				<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+				<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+			</div>
+			
+			<div id = "pImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
+				<img class="pPics" src="img/alphabetWords/p/pepper.png" style="width:100%">
+				<img class="pPics" src="img/alphabetWords/p/pig.png" style="width:100%">
+				<img class="pPics" src="img/alphabetWords/p/pineapple.png" style="width:100%">
+				
+				
+				<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+				<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+			</div>
+			
+			<div id = "qImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
+				<img class="qPics" src="img/alphabetWords/q/quail.png" style="width:100%">
+				<img class="qPics" src="img/alphabetWords/q/queen.png" style="width:100%">
+				
+				
+				<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+				<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+			</div>
+			
+			<div id = "rImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
+				<img class="rPics" src="img/alphabetWords/r/rainbow.png" style="width:100%">
+				<img class="rPics" src="img/alphabetWords/r/ring.png" style="width:100%">
+				<img class="rPics" src="img/alphabetWords/r/rooster.png" style="width:100%">
+				
+				
+				<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+				<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+			</div>
+			
+			<div id = "sImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
+				<img class="sPics" src="img/alphabetWords/s/salt.png" style="width:100%">
+				<img class="sPics" src="img/alphabetWords/s/shoe.png" style="width:100%">
+				<img class="sPics" src="img/alphabetWords/s/sun.png" style="width:100%">
+				
+				
+				<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+				<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+			</div>
+			
+			<div id = "tImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
+				<img class="tPics" src="img/alphabetWords/t/top.png" style="width:100%">
+				<img class="tPics" src="img/alphabetWords/t/train.png" style="width:100%">
+				<img class="tPics" src="img/alphabetWords/t/tree.png" style="width:100%">
+				
+				
+				<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+				<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+			</div>
+			
+			<div id = "uImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
+				<img class="uPics" src="img/alphabetWords/u/umbrella.png" style="width:100%">
+				<img class="uPics" src="img/alphabetWords/u/uniform.png" style="width:100%">
+				<img class="uPics" src="img/alphabetWords/u/utensils.png" style="width:100%">
+				
+				
+				<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+				<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+			</div>
+			
+			<div id = "vImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
+				<img class="vPics" src="img/alphabetWords/v/van.png" style="width:100%">
+				<img class="vPics" src="img/alphabetWords/v/vase.png" style="width:100%">
+				<img class="vPics" src="img/alphabetWords/v/violin.png" style="width:100%">
+				
+				
+				<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+				<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+			</div>
+			
+			<div id = "wImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
+				<img class="wPics" src="img/alphabetWords/w/watch.png" style="width:100%">
+				<img class="wPics" src="img/alphabetWords/w/watermelon.png" style="width:100%">
+				<img class="wPics" src="img/alphabetWords/w/wheel.png" style="width:100%">
+				
+				
+				<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+				<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+			</div>
+			
+			<div id = "xImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
+				<img class="xPics" src="img/alphabetWords/x/xray.png" style="width:100%">
+				<img class="xPics" src="img/alphabetWords/x/xylophone.png" style="width:100%">
+				
+				
+				<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+				<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+			</div>
+			
+			<div id = "yImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
+				<img class="yPics" src="img/alphabetWords/y/yarn.png" style="width:100%">
+				<img class="yPics" src="img/alphabetWords/y/yoyo.png" style="width:100%">
+				
+				
+				<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+				<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+			</div>
+			
+			<div id = "zImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
+				<img class="zPics" src="img/alphabetWords/z/zipper.png" style="width:100%">
+				<img class="zPics" src="img/alphabetWords/z/zoo.png" style="width:100%">
+				
+				
+				<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+				<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+			</div>
+			
 			<div id = "letterContainer">
-				<span class = "bigText">A</span>
+				<span id = "bigText">A</span>
 			</div>
 		</div>
-	
+		
+		<!--
+			For some reason, code bugs if inserted inside the <head> tag.
+			This is why javascript is placed on the bottom
+		-->
+		<script>
+			
+			//slideshow
+			
+			var slideIndex = 1;
+			showDivs(slideIndex);
+			var letter;
+			letter = 'A';
+
+			function plusDivs(n) {
+				showDivs(slideIndex += n);
+			}
+
+			function showDivs(n) {
+				var i;
+				var x;
+				
+				
+				switch(letter){
+					case "A":
+						x = document.getElementsByClassName("aPics");
+						$("#aImageSlideshow").show();
+						$("#bImageSlideshow").hide();
+						$("#cImageSlideshow").hide();
+						$("#dImageSlideshow").hide();
+						$("#eImageSlideshow").hide();
+						$("#fImageSlideshow").hide();
+						$("#gImageSlideshow").hide();
+						$("#hImageSlideshow").hide();
+						$("#iImageSlideshow").hide();
+						$("#jImageSlideshow").hide();
+						$("#kImageSlideshow").hide();
+						$("#lImageSlideshow").hide();
+						$("#mImageSlideshow").hide();
+						$("#nImageSlideshow").hide();
+						$("#oImageSlideshow").hide();
+						$("#pImageSlideshow").hide();
+						$("#qImageSlideshow").hide();
+						$("#rImageSlideshow").hide();
+						$("#sImageSlideshow").hide();
+						$("#tImageSlideshow").hide();
+						$("#uImageSlideshow").hide();
+						$("#vImageSlideshow").hide();
+						$("#wImageSlideshow").hide();
+						$("#xImageSlideshow").hide();
+						$("#yImageSlideshow").hide();
+						$("#zImageSlideshow").hide();
+						break;
+						
+					case "B":
+						x = document.getElementsByClassName("bPics");
+						$("#aImageSlideshow").hide();
+						$("#bImageSlideshow").show();
+						$("#cImageSlideshow").hide();
+						$("#dImageSlideshow").hide();
+						$("#eImageSlideshow").hide();
+						$("#fImageSlideshow").hide();
+						$("#gImageSlideshow").hide();
+						$("#hImageSlideshow").hide();
+						$("#iImageSlideshow").hide();
+						$("#jImageSlideshow").hide();
+						$("#kImageSlideshow").hide();
+						$("#lImageSlideshow").hide();
+						$("#mImageSlideshow").hide();
+						$("#nImageSlideshow").hide();
+						$("#oImageSlideshow").hide();
+						$("#pImageSlideshow").hide();
+						$("#qImageSlideshow").hide();
+						$("#rImageSlideshow").hide();
+						$("#sImageSlideshow").hide();
+						$("#tImageSlideshow").hide();
+						$("#uImageSlideshow").hide();
+						$("#vImageSlideshow").hide();
+						$("#wImageSlideshow").hide();
+						$("#xImageSlideshow").hide();
+						$("#yImageSlideshow").hide();
+						$("#zImageSlideshow").hide();
+						break;	
+						
+					case "C":
+						x = document.getElementsByClassName("cPics");
+						$("#aImageSlideshow").hide();
+						$("#bImageSlideshow").hide();
+						$("#cImageSlideshow").show();
+						$("#dImageSlideshow").hide();
+						$("#eImageSlideshow").hide();
+						$("#fImageSlideshow").hide();
+						$("#gImageSlideshow").hide();
+						$("#hImageSlideshow").hide();
+						$("#iImageSlideshow").hide();
+						$("#jImageSlideshow").hide();
+						$("#kImageSlideshow").hide();
+						$("#lImageSlideshow").hide();
+						$("#mImageSlideshow").hide();
+						$("#nImageSlideshow").hide();
+						$("#oImageSlideshow").hide();
+						$("#pImageSlideshow").hide();
+						$("#qImageSlideshow").hide();
+						$("#rImageSlideshow").hide();
+						$("#sImageSlideshow").hide();
+						$("#tImageSlideshow").hide();
+						$("#uImageSlideshow").hide();
+						$("#vImageSlideshow").hide();
+						$("#wImageSlideshow").hide();
+						$("#xImageSlideshow").hide();
+						$("#yImageSlideshow").hide();
+						$("#zImageSlideshow").hide();
+						break;		
+						
+					case "D":
+						x = document.getElementsByClassName("dPics");
+						$("#aImageSlideshow").hide();
+						$("#bImageSlideshow").hide();
+						$("#cImageSlideshow").hide();
+						$("#dImageSlideshow").show();
+						$("#eImageSlideshow").hide();
+						$("#fImageSlideshow").hide();
+						$("#gImageSlideshow").hide();
+						$("#hImageSlideshow").hide();
+						$("#iImageSlideshow").hide();
+						$("#jImageSlideshow").hide();
+						$("#kImageSlideshow").hide();
+						$("#lImageSlideshow").hide();
+						$("#mImageSlideshow").hide();
+						$("#nImageSlideshow").hide();
+						$("#oImageSlideshow").hide();
+						$("#pImageSlideshow").hide();
+						$("#qImageSlideshow").hide();
+						$("#rImageSlideshow").hide();
+						$("#sImageSlideshow").hide();
+						$("#tImageSlideshow").hide();
+						$("#uImageSlideshow").hide();
+						$("#vImageSlideshow").hide();
+						$("#wImageSlideshow").hide();
+						$("#xImageSlideshow").hide();
+						$("#yImageSlideshow").hide();
+						$("#zImageSlideshow").hide();
+						break;
+
+					case "E":
+						x = document.getElementsByClassName("ePics");
+						$("#aImageSlideshow").hide();
+						$("#bImageSlideshow").hide();
+						$("#cImageSlideshow").hide();
+						$("#dImageSlideshow").hide();
+						$("#eImageSlideshow").show();
+						$("#fImageSlideshow").hide();
+						$("#gImageSlideshow").hide();
+						$("#hImageSlideshow").hide();
+						$("#iImageSlideshow").hide();
+						$("#jImageSlideshow").hide();
+						$("#kImageSlideshow").hide();
+						$("#lImageSlideshow").hide();
+						$("#mImageSlideshow").hide();
+						$("#nImageSlideshow").hide();
+						$("#oImageSlideshow").hide();
+						$("#pImageSlideshow").hide();
+						$("#qImageSlideshow").hide();
+						$("#rImageSlideshow").hide();
+						$("#sImageSlideshow").hide();
+						$("#tImageSlideshow").hide();
+						$("#uImageSlideshow").hide();
+						$("#vImageSlideshow").hide();
+						$("#wImageSlideshow").hide();
+						$("#xImageSlideshow").hide();
+						$("#yImageSlideshow").hide();
+						$("#zImageSlideshow").hide();
+						break;	
+						
+					case "F":
+						x = document.getElementsByClassName("fPics");
+						$("#aImageSlideshow").hide();
+						$("#bImageSlideshow").hide();
+						$("#cImageSlideshow").hide();
+						$("#dImageSlideshow").hide();
+						$("#eImageSlideshow").hide();
+						$("#fImageSlideshow").show();
+						$("#gImageSlideshow").hide();
+						$("#hImageSlideshow").hide();
+						$("#iImageSlideshow").hide();
+						$("#jImageSlideshow").hide();
+						$("#kImageSlideshow").hide();
+						$("#lImageSlideshow").hide();
+						$("#mImageSlideshow").hide();
+						$("#nImageSlideshow").hide();
+						$("#oImageSlideshow").hide();
+						$("#pImageSlideshow").hide();
+						$("#qImageSlideshow").hide();
+						$("#rImageSlideshow").hide();
+						$("#sImageSlideshow").hide();
+						$("#tImageSlideshow").hide();
+						$("#uImageSlideshow").hide();
+						$("#vImageSlideshow").hide();
+						$("#wImageSlideshow").hide();
+						$("#xImageSlideshow").hide();
+						$("#yImageSlideshow").hide();
+						$("#zImageSlideshow").hide();
+						break;		
+						
+					case "G":
+						x = document.getElementsByClassName("gPics");
+						$("#aImageSlideshow").hide();
+						$("#bImageSlideshow").hide();
+						$("#cImageSlideshow").hide();
+						$("#dImageSlideshow").hide();
+						$("#eImageSlideshow").hide();
+						$("#fImageSlideshow").hide();
+						$("#gImageSlideshow").show();
+						$("#hImageSlideshow").hide();
+						$("#iImageSlideshow").hide();
+						$("#jImageSlideshow").hide();
+						$("#kImageSlideshow").hide();
+						$("#lImageSlideshow").hide();
+						$("#mImageSlideshow").hide();
+						$("#nImageSlideshow").hide();
+						$("#oImageSlideshow").hide();
+						$("#pImageSlideshow").hide();
+						$("#qImageSlideshow").hide();
+						$("#rImageSlideshow").hide();
+						$("#sImageSlideshow").hide();
+						$("#tImageSlideshow").hide();
+						$("#uImageSlideshow").hide();
+						$("#vImageSlideshow").hide();
+						$("#wImageSlideshow").hide();
+						$("#xImageSlideshow").hide();
+						$("#yImageSlideshow").hide();
+						$("#zImageSlideshow").hide();
+						break;	
+						
+					case "H":
+						x = document.getElementsByClassName("hPics");
+						$("#aImageSlideshow").hide();
+						$("#bImageSlideshow").hide();
+						$("#cImageSlideshow").hide();
+						$("#dImageSlideshow").hide();
+						$("#eImageSlideshow").hide();
+						$("#fImageSlideshow").hide();
+						$("#gImageSlideshow").hide();
+						$("#hImageSlideshow").show();
+						$("#iImageSlideshow").hide();
+						$("#jImageSlideshow").hide();
+						$("#kImageSlideshow").hide();
+						$("#lImageSlideshow").hide();
+						$("#mImageSlideshow").hide();
+						$("#nImageSlideshow").hide();
+						$("#oImageSlideshow").hide();
+						$("#pImageSlideshow").hide();
+						$("#qImageSlideshow").hide();
+						$("#rImageSlideshow").hide();
+						$("#sImageSlideshow").hide();
+						$("#tImageSlideshow").hide();
+						$("#uImageSlideshow").hide();
+						$("#vImageSlideshow").hide();
+						$("#wImageSlideshow").hide();
+						$("#xImageSlideshow").hide();
+						$("#yImageSlideshow").hide();
+						$("#zImageSlideshow").hide();
+						break;	
+						
+					case "I":
+						x = document.getElementsByClassName("iPics");
+						$("#aImageSlideshow").hide();
+						$("#bImageSlideshow").hide();
+						$("#cImageSlideshow").hide();
+						$("#dImageSlideshow").hide();
+						$("#eImageSlideshow").hide();
+						$("#fImageSlideshow").hide();
+						$("#gImageSlideshow").hide();
+						$("#hImageSlideshow").hide();
+						$("#iImageSlideshow").show();
+						$("#jImageSlideshow").hide();
+						$("#kImageSlideshow").hide();
+						$("#lImageSlideshow").hide();
+						$("#mImageSlideshow").hide();
+						$("#nImageSlideshow").hide();
+						$("#oImageSlideshow").hide();
+						$("#pImageSlideshow").hide();
+						$("#qImageSlideshow").hide();
+						$("#rImageSlideshow").hide();
+						$("#sImageSlideshow").hide();
+						$("#tImageSlideshow").hide();
+						$("#uImageSlideshow").hide();
+						$("#vImageSlideshow").hide();
+						$("#wImageSlideshow").hide();
+						$("#xImageSlideshow").hide();
+						$("#yImageSlideshow").hide();
+						$("#zImageSlideshow").hide();
+						break;	
+						
+					case "J":
+						x = document.getElementsByClassName("jPics");
+						$("#aImageSlideshow").hide();
+						$("#bImageSlideshow").hide();
+						$("#cImageSlideshow").hide();
+						$("#dImageSlideshow").hide();
+						$("#eImageSlideshow").hide();
+						$("#fImageSlideshow").hide();
+						$("#gImageSlideshow").hide();
+						$("#hImageSlideshow").hide();
+						$("#iImageSlideshow").hide();
+						$("#jImageSlideshow").show();
+						$("#kImageSlideshow").hide();
+						$("#lImageSlideshow").hide();
+						$("#mImageSlideshow").hide();
+						$("#nImageSlideshow").hide();
+						$("#oImageSlideshow").hide();
+						$("#pImageSlideshow").hide();
+						$("#qImageSlideshow").hide();
+						$("#rImageSlideshow").hide();
+						$("#sImageSlideshow").hide();
+						$("#tImageSlideshow").hide();
+						$("#uImageSlideshow").hide();
+						$("#vImageSlideshow").hide();
+						$("#wImageSlideshow").hide();
+						$("#xImageSlideshow").hide();
+						$("#yImageSlideshow").hide();
+						$("#zImageSlideshow").hide();
+						break;	
+						
+					case "K":
+						x = document.getElementsByClassName("kPics");
+						$("#aImageSlideshow").hide();
+						$("#bImageSlideshow").hide();
+						$("#cImageSlideshow").hide();
+						$("#dImageSlideshow").hide();
+						$("#eImageSlideshow").hide();
+						$("#fImageSlideshow").hide();
+						$("#gImageSlideshow").hide();
+						$("#hImageSlideshow").hide();
+						$("#iImageSlideshow").hide();
+						$("#jImageSlideshow").hide();
+						$("#kImageSlideshow").show();
+						$("#lImageSlideshow").hide();
+						$("#mImageSlideshow").hide();
+						$("#nImageSlideshow").hide();
+						$("#oImageSlideshow").hide();
+						$("#pImageSlideshow").hide();
+						$("#qImageSlideshow").hide();
+						$("#rImageSlideshow").hide();
+						$("#sImageSlideshow").hide();
+						$("#tImageSlideshow").hide();
+						$("#uImageSlideshow").hide();
+						$("#vImageSlideshow").hide();
+						$("#wImageSlideshow").hide();
+						$("#xImageSlideshow").hide();
+						$("#yImageSlideshow").hide();
+						$("#zImageSlideshow").hide();
+						break;	
+						
+					case "L":
+						x = document.getElementsByClassName("lPics");
+						$("#aImageSlideshow").hide();
+						$("#bImageSlideshow").hide();
+						$("#cImageSlideshow").hide();
+						$("#dImageSlideshow").hide();
+						$("#eImageSlideshow").hide();
+						$("#fImageSlideshow").hide();
+						$("#gImageSlideshow").hide();
+						$("#hImageSlideshow").hide();
+						$("#iImageSlideshow").hide();
+						$("#jImageSlideshow").hide();
+						$("#kImageSlideshow").hide();
+						$("#lImageSlideshow").show();
+						$("#mImageSlideshow").hide();
+						$("#nImageSlideshow").hide();
+						$("#oImageSlideshow").hide();
+						$("#pImageSlideshow").hide();
+						$("#qImageSlideshow").hide();
+						$("#rImageSlideshow").hide();
+						$("#sImageSlideshow").hide();
+						$("#tImageSlideshow").hide();
+						$("#uImageSlideshow").hide();
+						$("#vImageSlideshow").hide();
+						$("#wImageSlideshow").hide();
+						$("#xImageSlideshow").hide();
+						$("#yImageSlideshow").hide();
+						$("#zImageSlideshow").hide();
+						break;	
+						
+					case "M":
+						x = document.getElementsByClassName("mPics");
+						$("#aImageSlideshow").hide();
+						$("#bImageSlideshow").hide();
+						$("#cImageSlideshow").hide();
+						$("#dImageSlideshow").hide();
+						$("#eImageSlideshow").hide();
+						$("#fImageSlideshow").hide();
+						$("#gImageSlideshow").hide();
+						$("#hImageSlideshow").hide();
+						$("#iImageSlideshow").hide();
+						$("#jImageSlideshow").hide();
+						$("#kImageSlideshow").hide();
+						$("#lImageSlideshow").hide();
+						$("#mImageSlideshow").show();
+						$("#nImageSlideshow").hide();
+						$("#oImageSlideshow").hide();
+						$("#pImageSlideshow").hide();
+						$("#qImageSlideshow").hide();
+						$("#rImageSlideshow").hide();
+						$("#sImageSlideshow").hide();
+						$("#tImageSlideshow").hide();
+						$("#uImageSlideshow").hide();
+						$("#vImageSlideshow").hide();
+						$("#wImageSlideshow").hide();
+						$("#xImageSlideshow").hide();
+						$("#yImageSlideshow").hide();
+						$("#zImageSlideshow").hide();
+						break;	
+						
+					case "N":
+						x = document.getElementsByClassName("nPics");
+						$("#aImageSlideshow").hide();
+						$("#bImageSlideshow").hide();
+						$("#cImageSlideshow").hide();
+						$("#dImageSlideshow").hide();
+						$("#eImageSlideshow").hide();
+						$("#fImageSlideshow").hide();
+						$("#gImageSlideshow").hide();
+						$("#hImageSlideshow").hide();
+						$("#iImageSlideshow").hide();
+						$("#jImageSlideshow").hide();
+						$("#kImageSlideshow").hide();
+						$("#lImageSlideshow").hide();
+						$("#mImageSlideshow").hide();
+						$("#nImageSlideshow").show();
+						$("#oImageSlideshow").hide();
+						$("#pImageSlideshow").hide();
+						$("#qImageSlideshow").hide();
+						$("#rImageSlideshow").hide();
+						$("#sImageSlideshow").hide();
+						$("#tImageSlideshow").hide();
+						$("#uImageSlideshow").hide();
+						$("#vImageSlideshow").hide();
+						$("#wImageSlideshow").hide();
+						$("#xImageSlideshow").hide();
+						$("#yImageSlideshow").hide();
+						$("#zImageSlideshow").hide();
+						break;	
+						
+					case "O":
+						x = document.getElementsByClassName("oPics");
+						$("#aImageSlideshow").hide();
+						$("#bImageSlideshow").hide();
+						$("#cImageSlideshow").hide();
+						$("#dImageSlideshow").hide();
+						$("#eImageSlideshow").hide();
+						$("#fImageSlideshow").hide();
+						$("#gImageSlideshow").hide();
+						$("#hImageSlideshow").hide();
+						$("#iImageSlideshow").hide();
+						$("#jImageSlideshow").hide();
+						$("#kImageSlideshow").hide();
+						$("#lImageSlideshow").hide();
+						$("#mImageSlideshow").hide();
+						$("#nImageSlideshow").hide();
+						$("#oImageSlideshow").show();
+						$("#pImageSlideshow").hide();
+						$("#qImageSlideshow").hide();
+						$("#rImageSlideshow").hide();
+						$("#sImageSlideshow").hide();
+						$("#tImageSlideshow").hide();
+						$("#uImageSlideshow").hide();
+						$("#vImageSlideshow").hide();
+						$("#wImageSlideshow").hide();
+						$("#xImageSlideshow").hide();
+						$("#yImageSlideshow").hide();
+						$("#zImageSlideshow").hide();
+						break;	
+						
+					case "P":
+						x = document.getElementsByClassName("pPics");
+						$("#aImageSlideshow").hide();
+						$("#bImageSlideshow").hide();
+						$("#cImageSlideshow").hide();
+						$("#dImageSlideshow").hide();
+						$("#eImageSlideshow").hide();
+						$("#fImageSlideshow").hide();
+						$("#gImageSlideshow").hide();
+						$("#hImageSlideshow").hide();
+						$("#iImageSlideshow").hide();
+						$("#jImageSlideshow").hide();
+						$("#kImageSlideshow").hide();
+						$("#lImageSlideshow").hide();
+						$("#mImageSlideshow").hide();
+						$("#nImageSlideshow").hide();
+						$("#oImageSlideshow").hide();
+						$("#pImageSlideshow").show();
+						$("#qImageSlideshow").hide();
+						$("#rImageSlideshow").hide();
+						$("#sImageSlideshow").hide();
+						$("#tImageSlideshow").hide();
+						$("#uImageSlideshow").hide();
+						$("#vImageSlideshow").hide();
+						$("#wImageSlideshow").hide();
+						$("#xImageSlideshow").hide();
+						$("#yImageSlideshow").hide();
+						$("#zImageSlideshow").hide();
+						break;	
+						
+					case "Q":
+						x = document.getElementsByClassName("qPics");
+						$("#aImageSlideshow").hide();
+						$("#bImageSlideshow").hide();
+						$("#cImageSlideshow").hide();
+						$("#dImageSlideshow").hide();
+						$("#eImageSlideshow").hide();
+						$("#fImageSlideshow").hide();
+						$("#gImageSlideshow").hide();
+						$("#hImageSlideshow").hide();
+						$("#iImageSlideshow").hide();
+						$("#jImageSlideshow").hide();
+						$("#kImageSlideshow").hide();
+						$("#lImageSlideshow").hide();
+						$("#mImageSlideshow").hide();
+						$("#nImageSlideshow").hide();
+						$("#oImageSlideshow").hide();
+						$("#pImageSlideshow").hide();
+						$("#qImageSlideshow").show();
+						$("#rImageSlideshow").hide();
+						$("#sImageSlideshow").hide();
+						$("#tImageSlideshow").hide();
+						$("#uImageSlideshow").hide();
+						$("#vImageSlideshow").hide();
+						$("#wImageSlideshow").hide();
+						$("#xImageSlideshow").hide();
+						$("#yImageSlideshow").hide();
+						$("#zImageSlideshow").hide();
+						break;		
+						
+					case "R":
+						x = document.getElementsByClassName("rPics");
+						$("#aImageSlideshow").hide();
+						$("#bImageSlideshow").hide();
+						$("#cImageSlideshow").hide();
+						$("#dImageSlideshow").hide();
+						$("#eImageSlideshow").hide();
+						$("#fImageSlideshow").hide();
+						$("#gImageSlideshow").hide();
+						$("#hImageSlideshow").hide();
+						$("#iImageSlideshow").hide();
+						$("#jImageSlideshow").hide();
+						$("#kImageSlideshow").hide();
+						$("#lImageSlideshow").hide();
+						$("#mImageSlideshow").hide();
+						$("#nImageSlideshow").hide();
+						$("#oImageSlideshow").hide();
+						$("#pImageSlideshow").hide();
+						$("#qImageSlideshow").hide();
+						$("#rImageSlideshow").show();
+						$("#sImageSlideshow").hide();
+						$("#tImageSlideshow").hide();
+						$("#uImageSlideshow").hide();
+						$("#vImageSlideshow").hide();
+						$("#wImageSlideshow").hide();
+						$("#xImageSlideshow").hide();
+						$("#yImageSlideshow").hide();
+						$("#zImageSlideshow").hide();
+						break;	
+						
+					case "S":
+						x = document.getElementsByClassName("sPics");
+						$("#aImageSlideshow").hide();
+						$("#bImageSlideshow").hide();
+						$("#cImageSlideshow").hide();
+						$("#dImageSlideshow").hide();
+						$("#eImageSlideshow").hide();
+						$("#fImageSlideshow").hide();
+						$("#gImageSlideshow").hide();
+						$("#hImageSlideshow").hide();
+						$("#iImageSlideshow").hide();
+						$("#jImageSlideshow").hide();
+						$("#kImageSlideshow").hide();
+						$("#lImageSlideshow").hide();
+						$("#mImageSlideshow").hide();
+						$("#nImageSlideshow").hide();
+						$("#oImageSlideshow").hide();
+						$("#pImageSlideshow").hide();
+						$("#qImageSlideshow").hide();
+						$("#rImageSlideshow").hide();
+						$("#sImageSlideshow").show();
+						$("#tImageSlideshow").hide();
+						$("#uImageSlideshow").hide();
+						$("#vImageSlideshow").hide();
+						$("#wImageSlideshow").hide();
+						$("#xImageSlideshow").hide();
+						$("#yImageSlideshow").hide();
+						$("#zImageSlideshow").hide();
+						break;	
+						
+					case "T":
+						x = document.getElementsByClassName("tPics");
+						$("#aImageSlideshow").hide();
+						$("#bImageSlideshow").hide();
+						$("#cImageSlideshow").hide();
+						$("#dImageSlideshow").hide();
+						$("#eImageSlideshow").hide();
+						$("#fImageSlideshow").hide();
+						$("#gImageSlideshow").hide();
+						$("#hImageSlideshow").hide();
+						$("#iImageSlideshow").hide();
+						$("#jImageSlideshow").hide();
+						$("#kImageSlideshow").hide();
+						$("#lImageSlideshow").hide();
+						$("#mImageSlideshow").hide();
+						$("#nImageSlideshow").hide();
+						$("#oImageSlideshow").hide();
+						$("#pImageSlideshow").hide();
+						$("#qImageSlideshow").hide();
+						$("#rImageSlideshow").hide();
+						$("#sImageSlideshow").hide();
+						$("#tImageSlideshow").show();
+						$("#uImageSlideshow").hide();
+						$("#vImageSlideshow").hide();
+						$("#wImageSlideshow").hide();
+						$("#xImageSlideshow").hide();
+						$("#yImageSlideshow").hide();
+						$("#zImageSlideshow").hide();
+						break;	
+					
+					case "U":
+						x = document.getElementsByClassName("uPics");
+						$("#aImageSlideshow").hide();
+						$("#bImageSlideshow").hide();
+						$("#cImageSlideshow").hide();
+						$("#dImageSlideshow").hide();
+						$("#eImageSlideshow").hide();
+						$("#fImageSlideshow").hide();
+						$("#gImageSlideshow").hide();
+						$("#hImageSlideshow").hide();
+						$("#iImageSlideshow").hide();
+						$("#jImageSlideshow").hide();
+						$("#kImageSlideshow").hide();
+						$("#lImageSlideshow").hide();
+						$("#mImageSlideshow").hide();
+						$("#nImageSlideshow").hide();
+						$("#oImageSlideshow").hide();
+						$("#pImageSlideshow").hide();
+						$("#qImageSlideshow").hide();
+						$("#rImageSlideshow").hide();
+						$("#sImageSlideshow").hide();
+						$("#tImageSlideshow").hide();
+						$("#uImageSlideshow").show();
+						$("#vImageSlideshow").hide();
+						$("#wImageSlideshow").hide();
+						$("#xImageSlideshow").hide();
+						$("#yImageSlideshow").hide();
+						$("#zImageSlideshow").hide();
+						break;	
+						
+					case "V":
+						x = document.getElementsByClassName("vPics");
+						$("#aImageSlideshow").hide();
+						$("#bImageSlideshow").hide();
+						$("#cImageSlideshow").hide();
+						$("#dImageSlideshow").hide();
+						$("#eImageSlideshow").hide();
+						$("#fImageSlideshow").hide();
+						$("#gImageSlideshow").hide();
+						$("#hImageSlideshow").hide();
+						$("#iImageSlideshow").hide();
+						$("#jImageSlideshow").hide();
+						$("#kImageSlideshow").hide();
+						$("#lImageSlideshow").hide();
+						$("#mImageSlideshow").hide();
+						$("#nImageSlideshow").hide();
+						$("#oImageSlideshow").hide();
+						$("#pImageSlideshow").hide();
+						$("#qImageSlideshow").hide();
+						$("#rImageSlideshow").hide();
+						$("#sImageSlideshow").hide();
+						$("#tImageSlideshow").hide();
+						$("#uImageSlideshow").hide();
+						$("#vImageSlideshow").show();
+						$("#wImageSlideshow").hide();
+						$("#xImageSlideshow").hide();
+						$("#yImageSlideshow").hide();
+						$("#zImageSlideshow").hide();
+						break;	
+					
+					case "W":
+						x = document.getElementsByClassName("wPics");
+						$("#aImageSlideshow").hide();
+						$("#bImageSlideshow").hide();
+						$("#cImageSlideshow").hide();
+						$("#dImageSlideshow").hide();
+						$("#eImageSlideshow").hide();
+						$("#fImageSlideshow").hide();
+						$("#gImageSlideshow").hide();
+						$("#hImageSlideshow").hide();
+						$("#iImageSlideshow").hide();
+						$("#jImageSlideshow").hide();
+						$("#kImageSlideshow").hide();
+						$("#lImageSlideshow").hide();
+						$("#mImageSlideshow").hide();
+						$("#nImageSlideshow").hide();
+						$("#oImageSlideshow").hide();
+						$("#pImageSlideshow").hide();
+						$("#qImageSlideshow").hide();
+						$("#rImageSlideshow").hide();
+						$("#sImageSlideshow").hide();
+						$("#tImageSlideshow").hide();
+						$("#uImageSlideshow").hide();
+						$("#vImageSlideshow").hide();
+						$("#wImageSlideshow").show();
+						$("#xImageSlideshow").hide();
+						$("#yImageSlideshow").hide();
+						$("#zImageSlideshow").hide();
+						break;	
+					
+					case "X":
+						x = document.getElementsByClassName("xPics");
+						$("#aImageSlideshow").hide();
+						$("#bImageSlideshow").hide();
+						$("#cImageSlideshow").hide();
+						$("#dImageSlideshow").hide();
+						$("#eImageSlideshow").hide();
+						$("#fImageSlideshow").hide();
+						$("#gImageSlideshow").hide();
+						$("#hImageSlideshow").hide();
+						$("#iImageSlideshow").hide();
+						$("#jImageSlideshow").hide();
+						$("#kImageSlideshow").hide();
+						$("#lImageSlideshow").hide();
+						$("#mImageSlideshow").hide();
+						$("#nImageSlideshow").hide();
+						$("#oImageSlideshow").hide();
+						$("#pImageSlideshow").hide();
+						$("#qImageSlideshow").hide();
+						$("#rImageSlideshow").hide();
+						$("#sImageSlideshow").hide();
+						$("#tImageSlideshow").hide();
+						$("#uImageSlideshow").hide();
+						$("#vImageSlideshow").hide();
+						$("#wImageSlideshow").hide();
+						$("#xImageSlideshow").show();
+						$("#yImageSlideshow").hide();
+						$("#zImageSlideshow").hide();
+						break;	
+						
+					case "Y":
+						x = document.getElementsByClassName("yPics");
+						$("#aImageSlideshow").hide();
+						$("#bImageSlideshow").hide();
+						$("#cImageSlideshow").hide();
+						$("#dImageSlideshow").hide();
+						$("#eImageSlideshow").hide();
+						$("#fImageSlideshow").hide();
+						$("#gImageSlideshow").hide();
+						$("#hImageSlideshow").hide();
+						$("#iImageSlideshow").hide();
+						$("#jImageSlideshow").hide();
+						$("#kImageSlideshow").hide();
+						$("#lImageSlideshow").hide();
+						$("#mImageSlideshow").hide();
+						$("#nImageSlideshow").hide();
+						$("#oImageSlideshow").hide();
+						$("#pImageSlideshow").hide();
+						$("#qImageSlideshow").hide();
+						$("#rImageSlideshow").hide();
+						$("#sImageSlideshow").hide();
+						$("#tImageSlideshow").hide();
+						$("#uImageSlideshow").hide();
+						$("#vImageSlideshow").hide();
+						$("#wImageSlideshow").hide();
+						$("#xImageSlideshow").hide();
+						$("#yImageSlideshow").show();
+						$("#zImageSlideshow").hide();
+						break;	
+						
+					case "Z":
+						x = document.getElementsByClassName("zPics");
+						$("#aImageSlideshow").hide();
+						$("#bImageSlideshow").hide();
+						$("#cImageSlideshow").hide();
+						$("#dImageSlideshow").hide();
+						$("#eImageSlideshow").hide();
+						$("#fImageSlideshow").hide();
+						$("#gImageSlideshow").hide();
+						$("#hImageSlideshow").hide();
+						$("#iImageSlideshow").hide();
+						$("#jImageSlideshow").hide();
+						$("#kImageSlideshow").hide();
+						$("#lImageSlideshow").hide();
+						$("#mImageSlideshow").hide();
+						$("#nImageSlideshow").hide();
+						$("#oImageSlideshow").hide();
+						$("#pImageSlideshow").hide();
+						$("#qImageSlideshow").hide();
+						$("#rImageSlideshow").hide();
+						$("#sImageSlideshow").hide();
+						$("#tImageSlideshow").hide();
+						$("#uImageSlideshow").hide();
+						$("#vImageSlideshow").hide();
+						$("#wImageSlideshow").hide();
+						$("#xImageSlideshow").hide();
+						$("#yImageSlideshow").hide();
+						$("#zImageSlideshow").show();
+						break;	
+					
+					default:
+						x = document.getElementsByClassName("aPics");
+						$("#aImageSlideshow").show();
+						$("#bImageSlideshow").hide();
+						$("#cImageSlideshow").hide();
+						$("#dImageSlideshow").hide();
+						$("#eImageSlideshow").hide();
+						$("#fImageSlideshow").hide();
+						$("#gImageSlideshow").hide();
+						$("#hImageSlideshow").hide();
+						$("#iImageSlideshow").hide();
+						$("#jImageSlideshow").hide();
+						$("#kImageSlideshow").hide();
+						$("#lImageSlideshow").hide();
+						$("#mImageSlideshow").hide();
+						$("#nImageSlideshow").hide();
+						$("#oImageSlideshow").hide();
+						$("#pImageSlideshow").hide();
+						$("#qImageSlideshow").hide();
+						$("#rImageSlideshow").hide();
+						$("#sImageSlideshow").hide();
+						$("#tImageSlideshow").hide();
+						$("#uImageSlideshow").hide();
+						$("#vImageSlideshow").hide();
+						$("#wImageSlideshow").hide();
+						$("#xImageSlideshow").hide();
+						$("#yImageSlideshow").hide();
+						$("#zImageSlideshow").hide();
+						break;
+				}
+				if (n > x.length) {slideIndex = 1} 
+				if (n < 1) {slideIndex = x.length} ;
+				for (i = 0; i < x.length; i++) {
+					x[i].style.display = "none"; 
+				}
+				x[slideIndex-1].style.display = "block"; 
+			}
+			
+			//letter Changer
+					
+			
+					
+			function incrementLetter(){
+						
+				if(String.fromCharCode(letter.charCodeAt() + 1) != '[' ){
+						
+					letter = String.fromCharCode(letter.charCodeAt() + 1);
+					document.getElementById("bigText").textContent=letter;
+				}else{
+					// if letter is on Z, go back to A
+						
+					letter = 'A';
+					document.getElementById("bigText").textContent=letter;
+				}
+				
+				showDivs(1);
+					
+			}
+					
+			function decrementLetter(){
+						
+						
+				if(String.fromCharCode(letter.charCodeAt() - 1) != '@'){
+					letter = String.fromCharCode(letter.charCodeAt() - 1);
+					document.getElementById("bigText").textContent=letter;
+				}else{
+					// if letter is on A, go to Z
+						
+					letter = 'Z';
+					document.getElementById("bigText").textContent=letter;
+				}
+				
+				showDivs(1);
+					
+			}
+		</script>
 	</body>
 </html>
