@@ -15,7 +15,53 @@ Cruz, Beatriz Francesca
 	<head>
 		<title>TEACHWR</title> <!--Give a good name please-->
 		<meta charset="UTF-8">
-		<link rel = "stylesheet" href = "css/alphabetStyle.css" />
+		<link rel = "stylesheet" href = "css/countingStyle.css" />
+		<script src = "js/jquery-3.1.1.min.js"></script>
+		<link rel="stylesheet" href="css/w3.css" />
+		<link rel = "stylesheet" href = "css/countingStyle.css" />
+		
+		<script>
+			var number;
+			
+			number = document.getElementById('bigNumber');	// get value from span bigNumber
+			
+		
+			function countImages(){
+				
+			}
+			
+			function incrementNumber(){
+				number++;	// increment value
+				document.getElementById("bigNumber").textContent = number; // change value
+				$("#countingImgContainer").html(""); // reset popsicles to 0
+				
+				
+				console.log(number);
+				
+				for (var i = 0; i < number; i++){
+					$("#countingImgContainer").append("<img src = 'img/countingImgs/popsicle.png'> ");
+					console.log("Test");
+				}
+			}
+			
+			function decrementNumber(){
+				if(number > 0){
+				
+					number--;
+					document.getElementById("bigNumber").textContent = number;
+					$("#countingImgContainer").html(""); // reset popsicles to 0
+					
+					for (var i = 0; i < number; i++){
+					$("#countingImgContainer").append("<img src = 'img/countingImgs/popsicle.png'> ");
+					console.log("Test");
+				}
+				}
+				else{
+					// do nothing
+				}
+			}
+		</script>
+		
 	</head>
 	<body>
 		
@@ -25,19 +71,25 @@ Cruz, Beatriz Francesca
 	
 		<div id = "controlBar">
 			<div id = "effectControlsWrapper">
-				<a href = "#" class = "effectButton" ><img src="img/controlIcons/speak.png" /></a>
-				<a href = "#" class = "effectButton" ><img src="img/controlIcons/pictures.png" /></a>
-				<a href = "#" class = "effectButton" ><img src="img/controlIcons/case.png" /></a>
+				<button class = "effectButton" ><img src="img/controlIcons/speak.png" /></a>
+				<button class = "effectButton" ><img src="img/controlIcons/pictures.png" /></a>
+				<button class = "effectButton" ><img src="img/controlIcons/case.png" /></a>
 			</div>
 			<div id = "navigationControlsWrapper">
-				<a href = "#" class = "navigationButton" ><img src="img/controlIcons/leftArrow.png" /></a>
-				<a href = "#" class = "navigationButton" ><img src="img/controlIcons/rightArrow.png" /></a>
+				<button class = "navigationButton" onClick = "decrementNumber()"><img src="img/controlIcons/leftArrow.png" /></a>
+				<button class = "navigationButton" onClick = "incrementNumber()"><img src="img/controlIcons/rightArrow.png" /></a>
 			</div>
 		</div>
 		
 		<div id = "contentWrapper">
 			<!-- Insert Code here -->
-			Content Etc.
+			<div id = "countingImgContainer">
+			
+			</div>
+			
+			<div id = "numbercontainer">
+				<span id = "bigNumber">0</span>
+			</div>
 		</div>
 	
 	</body>

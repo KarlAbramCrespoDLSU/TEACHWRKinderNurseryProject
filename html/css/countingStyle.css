@@ -129,21 +129,21 @@ body {
 	width: 90%;
 }
 
-.imageSlideshow{
+#countingImgContainer{
 	float: left;
 	height: 100%;
-	width: 50%;
+	width: 48%;
 }
 
-#letterContainer{
+#numberContainer{
 	float: right;
 	height: 100%;
-	width: 50%;
+	width: 48%;
 }
 
-#bigText{
+#bigNumber{
 	color: #5AC4BE;
-	font-size: 35vw;
+	font-size: 30vw;
 	font-family: Arial;
 	font-weight: bold;
 	line-height: 90%;
