@@ -60,6 +60,8 @@ Cruz, Beatriz Francesca
 					// do nothing
 				}
 			}
+			
+			
 		</script>
 		
 	</head>
@@ -72,7 +74,7 @@ Cruz, Beatriz Francesca
 		<div id = "controlBar">
 			<div id = "effectControlsWrapper">
 				<button class = "effectButton" ><img src="img/controlIcons/speak.png" /></a>
-				<button class = "effectButton" ><img src="img/controlIcons/pictures.png" /></a>
+				<button id = "toggleImgCounter" class = "effectButton" ><img src="img/controlIcons/pictures.png" /></a>
 				<button class = "effectButton" ><img src="img/controlIcons/case.png" /></a>
 			</div>
 			<div id = "navigationControlsWrapper">
@@ -84,13 +86,20 @@ Cruz, Beatriz Francesca
 		<div id = "contentWrapper">
 			<!-- Insert Code here -->
 			<div id = "countingImgContainer">
-			
+				
 			</div>
 			
 			<div id = "numbercontainer">
 				<span id = "bigNumber">0</span>
 			</div>
 		</div>
-	
+		<script>
+			$("#countingImgContainer").hide();
+			
+			$("#toggleImgCounter").click(function(){
+				$("#countingImgContainer").toggle();
+			});
+		</script>
 	</body>
+	
 </html>

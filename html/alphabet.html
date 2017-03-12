@@ -30,7 +30,7 @@ Cruz, Beatriz Francesca
 		<div id = "controlBar">
 			<div id = "effectControlsWrapper">
 				<button class = "effectButton" ><img src="img/controlIcons/speak.png" /></a>
-				<button class = "effectButton" ><img src="img/controlIcons/pictures.png" /></a>
+				<button id = "toggleSlideshow" class = "effectButton" ><img src="img/controlIcons/pictures.png" /></a>
 				<button class = "effectButton" ><img src="img/controlIcons/case.png" /></a>
 			</div>
 			<div id = "navigationControlsWrapper">
@@ -41,261 +41,262 @@ Cruz, Beatriz Francesca
 		
 		<div id = "contentWrapper">
 			<!-- Insert Code here -->
-			<div id = "aImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
-				<img class="aPics" src="img/alphabetWords/a/ant.png" style="width:100%">
-				<img class="aPics" src="img/alphabetWords/a/apple.png" style="width:100%">
-				<img class="aPics" src="img/alphabetWords/a/atis.png" style="width:100%">
+			<div id = "imageSlideshowContainer">
+				<div id = "aImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
+					<img class="aPics" src="img/alphabetWords/a/ant.png" style="width:100%">
+					<img class="aPics" src="img/alphabetWords/a/apple.png" style="width:100%">
+					<img class="aPics" src="img/alphabetWords/a/atis.png" style="width:100%">
+					
+					
+					<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+					<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+				</div>
 				
+				<div id = "bImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
+					<img class="bPics" src="img/alphabetWords/b/ball.png" style="width:100%">
+					<img class="bPics" src="img/alphabetWords/b/boat.png" style="width:100%">
+					<img class="bPics" src="img/alphabetWords/b/boy.png" style="width:100%">
+					
+					
+					<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+					<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+				</div>
 				
-				<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-				<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+				<div id = "cImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
+					<img class="cPics" src="img/alphabetWords/c/car.png" style="width:100%">
+					<img class="cPics" src="img/alphabetWords/c/cat.png" style="width:100%">
+					<img class="cPics" src="img/alphabetWords/c/cow.png" style="width:100%">
+					
+					
+					<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+					<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+				</div>
+				
+				<div id = "dImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
+					<img class="dPics" src="img/alphabetWords/d/dog.png" style="width:100%">
+					<img class="dPics" src="img/alphabetWords/d/dress.png" style="width:100%">
+					<img class="dPics" src="img/alphabetWords/d/duck.png" style="width:100%">
+					
+					
+					<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+					<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+				</div>
+				
+				<div id = "eImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
+					<img class="ePics" src="img/alphabetWords/e/eagle.png" style="width:100%">
+					<img class="ePics" src="img/alphabetWords/e/egg.png" style="width:100%">
+					<img class="ePics" src="img/alphabetWords/e/eye.png" style="width:100%">
+					
+					
+					<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+					<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+				</div>
+				
+				<div id = "fImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
+					<img class="fPics" src="img/alphabetWords/f/fan.png" style="width:100%">
+					<img class="fPics" src="img/alphabetWords/f/fish.png" style="width:100%">
+					<img class="fPics" src="img/alphabetWords/f/flower.png" style="width:100%">
+					
+					
+					<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+					<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+				</div>
+				
+				<div id = "gImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
+					<img class="gPics" src="img/alphabetWords/g/girl.png" style="width:100%">
+					<img class="gPics" src="img/alphabetWords/g/glass.png" style="width:100%">
+					<img class="gPics" src="img/alphabetWords/g/grapes.png" style="width:100%">
+					
+					
+					<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+					<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+				</div>
+				
+				<div id = "hImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
+					<img class="hPics" src="img/alphabetWords/h/hat.png" style="width:100%">
+					<img class="hPics" src="img/alphabetWords/h/horse.png" style="width:100%">
+					<img class="hPics" src="img/alphabetWords/h/house.png" style="width:100%">
+					
+					
+					<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+					<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+				</div>
+				
+				<div id = "iImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
+					<img class="iPics" src="img/alphabetWords/i/ice.png" style="width:100%">
+					<img class="iPics" src="img/alphabetWords/i/ink.png" style="width:100%">
+					<img class="iPics" src="img/alphabetWords/i/island.png" style="width:100%">
+					
+					
+					<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+					<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+				</div>
+				
+				<div id = "jImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
+					<img class="jPics" src="img/alphabetWords/j/jacket.png" style="width:100%">
+					<img class="jPics" src="img/alphabetWords/j/jellyfish.png" style="width:100%">
+					<img class="jPics" src="img/alphabetWords/j/juice.png" style="width:100%">
+					
+					
+					<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+					<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+				</div>
+				
+				<div id = "kImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
+					<img class="kPics" src="img/alphabetWords/k/kettle.png" style="width:100%">
+					<img class="kPics" src="img/alphabetWords/k/key.png" style="width:100%">
+					<img class="kPics" src="img/alphabetWords/k/kite.png" style="width:100%">
+					
+					
+					<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+					<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+				</div>
+				
+				<div id = "lImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
+					<img class="lPics" src="img/alphabetWords/l/leaf.png" style="width:100%">
+					<img class="lPics" src="img/alphabetWords/l/lemon.png" style="width:100%">
+					<img class="lPics" src="img/alphabetWords/l/lion.png" style="width:100%">
+					
+					
+					<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+					<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+				</div>
+				
+				<div id = "mImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
+					<img class="mPics" src="img/alphabetWords/m/moon.png" style="width:100%">
+					<img class="mPics" src="img/alphabetWords/m/mouse.png" style="width:100%">
+					
+					
+					<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+					<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+				</div>
+				
+				<div id = "nImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
+					<img class="nPics" src="img/alphabetWords/n/noodles.png" style="width:100%">
+					<img class="nPics" src="img/alphabetWords/n/notebook.png" style="width:100%">
+					<img class="nPics" src="img/alphabetWords/n/nut.png" style="width:100%">
+					
+					
+					<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+					<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+				</div>
+				
+				<div id = "oImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
+					<img class="oPics" src="img/alphabetWords/o/octopus.png" style="width:100%">
+					<img class="oPics" src="img/alphabetWords/o/onion.png" style="width:100%">
+					<img class="oPics" src="img/alphabetWords/o/orange.png" style="width:100%">
+					
+					
+					<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+					<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+				</div>
+				
+				<div id = "pImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
+					<img class="pPics" src="img/alphabetWords/p/pepper.png" style="width:100%">
+					<img class="pPics" src="img/alphabetWords/p/pig.png" style="width:100%">
+					<img class="pPics" src="img/alphabetWords/p/pineapple.png" style="width:100%">
+					
+					
+					<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+					<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+				</div>
+				
+				<div id = "qImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
+					<img class="qPics" src="img/alphabetWords/q/quail.png" style="width:100%">
+					<img class="qPics" src="img/alphabetWords/q/queen.png" style="width:100%">
+					
+					
+					<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+					<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+				</div>
+				
+				<div id = "rImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
+					<img class="rPics" src="img/alphabetWords/r/rainbow.png" style="width:100%">
+					<img class="rPics" src="img/alphabetWords/r/ring.png" style="width:100%">
+					<img class="rPics" src="img/alphabetWords/r/rooster.png" style="width:100%">
+					
+					
+					<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+					<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+				</div>
+				
+				<div id = "sImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
+					<img class="sPics" src="img/alphabetWords/s/salt.png" style="width:100%">
+					<img class="sPics" src="img/alphabetWords/s/shoe.png" style="width:100%">
+					<img class="sPics" src="img/alphabetWords/s/sun.png" style="width:100%">
+					
+					
+					<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+					<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+				</div>
+				
+				<div id = "tImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
+					<img class="tPics" src="img/alphabetWords/t/top.png" style="width:100%">
+					<img class="tPics" src="img/alphabetWords/t/train.png" style="width:100%">
+					<img class="tPics" src="img/alphabetWords/t/tree.png" style="width:100%">
+					
+					
+					<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+					<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+				</div>
+				
+				<div id = "uImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
+					<img class="uPics" src="img/alphabetWords/u/umbrella.png" style="width:100%">
+					<img class="uPics" src="img/alphabetWords/u/uniform.png" style="width:100%">
+					<img class="uPics" src="img/alphabetWords/u/utensils.png" style="width:100%">
+					
+					
+					<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+					<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+				</div>
+				
+				<div id = "vImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
+					<img class="vPics" src="img/alphabetWords/v/van.png" style="width:100%">
+					<img class="vPics" src="img/alphabetWords/v/vase.png" style="width:100%">
+					<img class="vPics" src="img/alphabetWords/v/violin.png" style="width:100%">
+					
+					
+					<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+					<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+				</div>
+				
+				<div id = "wImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
+					<img class="wPics" src="img/alphabetWords/w/watch.png" style="width:100%">
+					<img class="wPics" src="img/alphabetWords/w/watermelon.png" style="width:100%">
+					<img class="wPics" src="img/alphabetWords/w/wheel.png" style="width:100%">
+					
+					
+					<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+					<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+				</div>
+				
+				<div id = "xImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
+					<img class="xPics" src="img/alphabetWords/x/xray.png" style="width:100%">
+					<img class="xPics" src="img/alphabetWords/x/xylophone.png" style="width:100%">
+					
+					
+					<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+					<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+				</div>
+				
+				<div id = "yImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
+					<img class="yPics" src="img/alphabetWords/y/yarn.png" style="width:100%">
+					<img class="yPics" src="img/alphabetWords/y/yoyo.png" style="width:100%">
+					
+					
+					<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+					<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+				</div>
+				
+				<div id = "zImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
+					<img class="zPics" src="img/alphabetWords/z/zipper.png" style="width:100%">
+					<img class="zPics" src="img/alphabetWords/z/zoo.png" style="width:100%">
+					
+					
+					<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+					<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+				</div>
 			</div>
-			
-			<div id = "bImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
-				<img class="bPics" src="img/alphabetWords/b/ball.png" style="width:100%">
-				<img class="bPics" src="img/alphabetWords/b/boat.png" style="width:100%">
-				<img class="bPics" src="img/alphabetWords/b/boy.png" style="width:100%">
-				
-				
-				<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-				<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
-			</div>
-			
-			<div id = "cImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
-				<img class="cPics" src="img/alphabetWords/c/car.png" style="width:100%">
-				<img class="cPics" src="img/alphabetWords/c/cat.png" style="width:100%">
-				<img class="cPics" src="img/alphabetWords/c/cow.png" style="width:100%">
-				
-				
-				<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-				<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
-			</div>
-			
-			<div id = "dImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
-				<img class="dPics" src="img/alphabetWords/d/dog.png" style="width:100%">
-				<img class="dPics" src="img/alphabetWords/d/dress.png" style="width:100%">
-				<img class="dPics" src="img/alphabetWords/d/duck.png" style="width:100%">
-				
-				
-				<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-				<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
-			</div>
-			
-			<div id = "eImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
-				<img class="ePics" src="img/alphabetWords/e/eagle.png" style="width:100%">
-				<img class="ePics" src="img/alphabetWords/e/egg.png" style="width:100%">
-				<img class="ePics" src="img/alphabetWords/e/eye.png" style="width:100%">
-				
-				
-				<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-				<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
-			</div>
-			
-			<div id = "fImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
-				<img class="fPics" src="img/alphabetWords/f/fan.png" style="width:100%">
-				<img class="fPics" src="img/alphabetWords/f/fish.png" style="width:100%">
-				<img class="fPics" src="img/alphabetWords/f/flower.png" style="width:100%">
-				
-				
-				<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-				<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
-			</div>
-			
-			<div id = "gImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
-				<img class="gPics" src="img/alphabetWords/g/girl.png" style="width:100%">
-				<img class="gPics" src="img/alphabetWords/g/glass.png" style="width:100%">
-				<img class="gPics" src="img/alphabetWords/g/grapes.png" style="width:100%">
-				
-				
-				<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-				<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
-			</div>
-			
-			<div id = "hImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
-				<img class="hPics" src="img/alphabetWords/h/hat.png" style="width:100%">
-				<img class="hPics" src="img/alphabetWords/h/horse.png" style="width:100%">
-				<img class="hPics" src="img/alphabetWords/h/house.png" style="width:100%">
-				
-				
-				<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-				<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
-			</div>
-			
-			<div id = "iImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
-				<img class="iPics" src="img/alphabetWords/i/ice.png" style="width:100%">
-				<img class="iPics" src="img/alphabetWords/i/ink.png" style="width:100%">
-				<img class="iPics" src="img/alphabetWords/i/island.png" style="width:100%">
-				
-				
-				<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-				<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
-			</div>
-			
-			<div id = "jImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
-				<img class="jPics" src="img/alphabetWords/j/jacket.png" style="width:100%">
-				<img class="jPics" src="img/alphabetWords/j/jellyfish.png" style="width:100%">
-				<img class="jPics" src="img/alphabetWords/j/juice.png" style="width:100%">
-				
-				
-				<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-				<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
-			</div>
-			
-			<div id = "kImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
-				<img class="kPics" src="img/alphabetWords/k/kettle.png" style="width:100%">
-				<img class="kPics" src="img/alphabetWords/k/key.png" style="width:100%">
-				<img class="kPics" src="img/alphabetWords/k/kite.png" style="width:100%">
-				
-				
-				<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-				<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
-			</div>
-			
-			<div id = "lImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
-				<img class="lPics" src="img/alphabetWords/l/leaf.png" style="width:100%">
-				<img class="lPics" src="img/alphabetWords/l/lemon.png" style="width:100%">
-				<img class="lPics" src="img/alphabetWords/l/lion.png" style="width:100%">
-				
-				
-				<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-				<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
-			</div>
-			
-			<div id = "mImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
-				<img class="mPics" src="img/alphabetWords/m/moon.png" style="width:100%">
-				<img class="mPics" src="img/alphabetWords/m/mouse.png" style="width:100%">
-				
-				
-				<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-				<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
-			</div>
-			
-			<div id = "nImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
-				<img class="nPics" src="img/alphabetWords/n/noodles.png" style="width:100%">
-				<img class="nPics" src="img/alphabetWords/n/notebook.png" style="width:100%">
-				<img class="nPics" src="img/alphabetWords/n/nut.png" style="width:100%">
-				
-				
-				<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-				<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
-			</div>
-			
-			<div id = "oImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
-				<img class="oPics" src="img/alphabetWords/o/octopus.png" style="width:100%">
-				<img class="oPics" src="img/alphabetWords/o/onion.png" style="width:100%">
-				<img class="oPics" src="img/alphabetWords/o/orange.png" style="width:100%">
-				
-				
-				<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-				<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
-			</div>
-			
-			<div id = "pImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
-				<img class="pPics" src="img/alphabetWords/p/pepper.png" style="width:100%">
-				<img class="pPics" src="img/alphabetWords/p/pig.png" style="width:100%">
-				<img class="pPics" src="img/alphabetWords/p/pineapple.png" style="width:100%">
-				
-				
-				<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-				<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
-			</div>
-			
-			<div id = "qImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
-				<img class="qPics" src="img/alphabetWords/q/quail.png" style="width:100%">
-				<img class="qPics" src="img/alphabetWords/q/queen.png" style="width:100%">
-				
-				
-				<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-				<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
-			</div>
-			
-			<div id = "rImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
-				<img class="rPics" src="img/alphabetWords/r/rainbow.png" style="width:100%">
-				<img class="rPics" src="img/alphabetWords/r/ring.png" style="width:100%">
-				<img class="rPics" src="img/alphabetWords/r/rooster.png" style="width:100%">
-				
-				
-				<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-				<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
-			</div>
-			
-			<div id = "sImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
-				<img class="sPics" src="img/alphabetWords/s/salt.png" style="width:100%">
-				<img class="sPics" src="img/alphabetWords/s/shoe.png" style="width:100%">
-				<img class="sPics" src="img/alphabetWords/s/sun.png" style="width:100%">
-				
-				
-				<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-				<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
-			</div>
-			
-			<div id = "tImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
-				<img class="tPics" src="img/alphabetWords/t/top.png" style="width:100%">
-				<img class="tPics" src="img/alphabetWords/t/train.png" style="width:100%">
-				<img class="tPics" src="img/alphabetWords/t/tree.png" style="width:100%">
-				
-				
-				<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-				<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
-			</div>
-			
-			<div id = "uImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
-				<img class="uPics" src="img/alphabetWords/u/umbrella.png" style="width:100%">
-				<img class="uPics" src="img/alphabetWords/u/uniform.png" style="width:100%">
-				<img class="uPics" src="img/alphabetWords/u/utensils.png" style="width:100%">
-				
-				
-				<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-				<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
-			</div>
-			
-			<div id = "vImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
-				<img class="vPics" src="img/alphabetWords/v/van.png" style="width:100%">
-				<img class="vPics" src="img/alphabetWords/v/vase.png" style="width:100%">
-				<img class="vPics" src="img/alphabetWords/v/violin.png" style="width:100%">
-				
-				
-				<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-				<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
-			</div>
-			
-			<div id = "wImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
-				<img class="wPics" src="img/alphabetWords/w/watch.png" style="width:100%">
-				<img class="wPics" src="img/alphabetWords/w/watermelon.png" style="width:100%">
-				<img class="wPics" src="img/alphabetWords/w/wheel.png" style="width:100%">
-				
-				
-				<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-				<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
-			</div>
-			
-			<div id = "xImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
-				<img class="xPics" src="img/alphabetWords/x/xray.png" style="width:100%">
-				<img class="xPics" src="img/alphabetWords/x/xylophone.png" style="width:100%">
-				
-				
-				<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-				<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
-			</div>
-			
-			<div id = "yImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
-				<img class="yPics" src="img/alphabetWords/y/yarn.png" style="width:100%">
-				<img class="yPics" src="img/alphabetWords/y/yoyo.png" style="width:100%">
-				
-				
-				<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-				<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
-			</div>
-			
-			<div id = "zImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
-				<img class="zPics" src="img/alphabetWords/z/zipper.png" style="width:100%">
-				<img class="zPics" src="img/alphabetWords/z/zoo.png" style="width:100%">
-				
-				
-				<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-				<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
-			</div>
-			
 			<div id = "letterContainer">
 				<span id = "bigText">A</span>
 			</div>
@@ -1179,6 +1180,12 @@ Cruz, Beatriz Francesca
 				showDivs(1);
 					
 			}
+			
+			$("#imageSlideshowContainer").hide();
+			
+			$("#toggleSlideshow").click(function(){
+				$("#imageSlideshowContainer").toggle();
+			});
 		</script>
 	</body>
 </html>
