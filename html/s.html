@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<!-- 
+
+TEACHWR S21 AY 2016-2017 TERM 2
+
+Chingcuangco, Rene Jeric
+Crespo, Karl Crespo
+Cruz, Beatriz Francesca
+
+
+ -->
+
+<html>
+	<head>
+		<title>TEACHWR</title> <!--Give a good name please-->
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src = "js/jquery-3.1.1.min.js"></script>
+		<link rel="stylesheet" href="css/w3.css" />
+		<link rel = "stylesheet" href = "css/alphabetStyle.css" />
+		
+	</head>
+	<body>
+		
+		<div id = "menuButtonWrapper">
+			<a href = "index.html" class = "menuButtonIcon" ><img src="img/controlIcons/menuBurger.png" /></a>
+		</div>
+	
+		<div id = "controlBar">
+			<div id = "effectControlsWrapper">
+				<button id = "toggleVideo" class = "effectButton" ><img src="img/controlIcons/video.png" />
+				<button id = "toggleSlideshow" class = "effectButton" ><img src="img/controlIcons/pictures.png" />
+				<button id = "toggleCase" class = "effectButton" ><img src="img/controlIcons/case.png" />
+				<button id = "toggleDrawing" class = "effectButton" ><img src="img/controlIcons/pencil.png" />
+				
+			</div>
+			<div id = "navigationControlsWrapper">
+				<a href = "r.html" class = "navigationButton"><img src="img/controlIcons/leftArrow.png" /></a>
+				<a href = "t.html" class = "navigationButton"><img src="img/controlIcons/rightArrow.png" /></a>
+			</div>
+		</div>
+		
+		
+		
+		<div id = "contentWrapper">
+			<!-- Insert Code here -->
+			
+			
+			<div id = "imageSlideshowContainer">
+				<div id = "aImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
+					<img class="mySlides" src="img/alphabetWords/a/ant.png" style="width:100%">
+					<img class="mySlides" src="img/alphabetWords/a/apple.png" style="width:100%">
+					<img class="mySlides" src="img/alphabetWords/a/atis.png" style="width:100%">
+					
+					
+					<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+					<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+				</div>
+				
+				
+				
+				
+			</div>
+			<div id = "letterContainer">
+				<span id = "bigText">S</span>
+			</div>
+		</div>
+		
+		<!--
+			For some reason, code bugs if inserted inside the <head> tag.
+			This is why javascript is placed on the bottom
+		-->
+		<script>
+			
+			//slideshow
+					
+			var slideIndex = 1;
+			showDivs(slideIndex);
+
+			function plusDivs(n) {
+				showDivs(slideIndex += n);
+			}
+
+			function showDivs(n) {
+				var i;
+				var x = document.getElementsByClassName("mySlides");
+				if (n > x.length) {slideIndex = 1} 
+				if (n < 1) {slideIndex = x.length} ;
+				for (i = 0; i < x.length; i++) {
+					x[i].style.display = "none"; 
+				}
+				x[slideIndex-1].style.display = "block"; 
+			}
+					
+					
+			$("#imageSlideshowContainer").hide();
+					
+			$("#toggleSlideshow").click(function(){
+				$("#imageSlideshowContainer").toggle();
+			});
+		</script>
+	</body>
+</html>
