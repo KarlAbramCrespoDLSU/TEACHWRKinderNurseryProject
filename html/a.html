@@ -13,7 +13,7 @@ Cruz, Beatriz Francesca
 
 <html>
 	<head>
-		<title>TEACHWR</title> <!--Give a good name please-->
+		<title>Phonemes and Counting</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<script src = "js/jquery-3.1.1.min.js"></script>
@@ -21,11 +21,16 @@ Cruz, Beatriz Francesca
 		<link rel = "stylesheet" href = "css/alphabetStyle.css" />
 		
 	</head>
+	
 	<body>
+		<div id="menuButtonWrapper">
+			<button class="menuButtonIcon" onclick="menuDropdown()"> <img src="img/controlIcons/menuBurger.png" /></button>
+			<div class="dropdown-content" id="dropdownList">
+			  <a href="index.html">Home</a>
+			  <a href="alphabetmenu.html">Alphabet Menu</a>
+			</div>
+		</div> 
 		
-		<div id = "menuButtonWrapper">
-			<a href = "index.html" class = "menuButtonIcon" ><img src="img/controlIcons/menuBurger.png" /></a>
-		</div>
 	
 		<div id = "controlBar">
 			<div id = "effectControlsWrapper">
@@ -43,23 +48,27 @@ Cruz, Beatriz Francesca
 		
 		
 		
+		<div id="videoContainer">
+			<video width="1280" height="570" controls>
+				<source src="vid/placeholdervid.mp4" type="video/mp4">
+			</video>
+		</div>
+		
+		
+		
 		<div id = "contentWrapper">
 			<!-- Insert Code here -->
 			
 			
 			<div id = "imageSlideshowContainer">
-				<div id = "aImageSlideshow" class = "w3-content w3-display-container imageSlideshow">
-					<img class="mySlides" src="img/alphabetWords/a/ant.png" style="width:100%">
-					<img class="mySlides" src="img/alphabetWords/a/apple.png" style="width:100%">
-					<img class="mySlides" src="img/alphabetWords/a/atis.png" style="width:100%">
-					
-					
+				<div class = "w3-content w3-display-container imageSlideshow">
+					<img class="mySlides" src="img/alphabetWords/a/ant.png" style="width:300px">
+					<img class="mySlides" src="img/alphabetWords/a/apple.png" style="width:300px">
+					<img class="mySlides" src="img/alphabetWords/a/atis.png" style="width:300px">
 					<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-					<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+					<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>			
 				</div>
-				
-				
-				
+						
 				
 			</div>
 			<div id = "letterContainer">
@@ -94,11 +103,75 @@ Cruz, Beatriz Francesca
 			}
 					
 					
-			$("#imageSlideshowContainer").hide();
-					
+			// toggle between hiding and showing the dropdown content 	
+			function menuDropdown(){
+				document.getElementById("dropdownList").classList.toggle("show");
+			}		
+			
+			// Close the dropdown if the user clicks outside of it
+			window.onclick = function(event) {
+				if (!event.target.matches('.menuButtonIcon')) {
+					var dropdowns = document.getElementsByClassName("dropdown-content");
+					var i;
+					for (i = 0; i < dropdowns.length; i++) {
+						var openDropdown = dropdowns[i];
+							if (openDropdown.classList.contains('show')) {
+								openDropdown.classList.remove('show');
+							}
+					}
+				}
+			}
+
+				
+			$("#imageSlideshowContainer").hide();				
+				
 			$("#toggleSlideshow").click(function(){
 				$("#imageSlideshowContainer").toggle();
 			});
+			
+		
+			$("#contentWrapper").hide();
+			$("#videoContainer").show();
+			
+			$("#toggleVideo").click(function(){
+				if($("#videoContainer").css("display") == "none"){
+					$("#videoContainer").css("display","block");
+					$("#contentWrapper").css("display","none");
+				}
+				else{
+					$("#videoContainer").css("display","none");
+					$("#contentWrapper").css("display","block");
+				}
+			});
+			
+			
+			$("#bigText").show();
+			$("#smallText").hide();		
+			
+			var caseIndex = 0;
+			
+			$("#toggleCase").click(function(){
+				switch(caseIndex){
+					case 0:
+						$("#bigText").text("a");
+						caseIndex++;
+						break;
+					case 1:
+						$("#bigText").text("Aa");
+						caseIndex++;
+						break;
+					case 2:
+						$("#bigText").text("A");
+						caseIndex = 0;
+						break;
+					default:
+						$("#bigText").text("A");
+						caseIndex = 0;
+						break;
+				}
+			});
+			
+				
 		</script>
 	</body>
 </html>

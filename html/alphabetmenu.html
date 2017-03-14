@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<!-- 
+
+TEACHWR S21 AY 2016-2017 TERM 2
+
+Chingcuangco, Rene Jeric
+Crespo, Karl Crespo
+Cruz, Beatriz Francesca
+
+
+ -->
+
+<html>
+	<head>
+		<title>Phonemes and Counting</title> 
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src = "js/jquery-3.1.1.min.js"></script>
+		<link rel="stylesheet" href="css/w3.css" />
+		<link rel = "stylesheet" href = "css/style.css" />
+		<link rel = "stylesheet" href = "css/alphabetStyle.css" />
+		
+	</head>
+	
+	<body>
+		<div id="menuButtonWrapper">
+			<button class="menuButtonIcon" onclick="menuDropdown()"> <img src="img/controlIcons/menuBurger.png" /></button>
+			<div class="dropdown-content" id="dropdownList">
+			  <a href="index.html">Home</a>
+			</div>
+		</div> 
+		<div id = "controlBar">
+			<div id = "effectControlsWrapper">
+				<button id = "toggleVideo" class = "effectButton" ><img src="img/controlIcons/video.png" />
+				
+			</div>
+			<div id = "navigationControlsWrapper">
+				<a href = "phonemeact1.html" class = "navigationButton" ><img src="img/controlIcons/activity.png" /> </a>
+			</div>
+		</div>
+		
+		<div id="videoContainer">
+			<video width="1280" height="570" controls>
+				<source src="vid/placeholdervid.mp4" type="video/mp4">
+			</video>
+		</div>
+	
+		<div id="alphabetlist"> 
+			<table> 
+			<tr>
+				<td><a href = "a.html"><img src="img/alphabetLetters/a.png" /></a> </td>
+				<td><a href = "b.html"><img src="img/alphabetLetters/b.png" /></a> </td>
+				<td><a href = "c.html"><img src="img/alphabetLetters/c.png" /></a> </td>
+				<td><a href = "#"><img src="img/alphabetLetters/a.png" /></a> </td>
+				<td><a href = "#"><img src="img/alphabetLetters/a.png" /></a> </td>
+				<td><a href = "#"><img src="img/alphabetLetters/a.png" /></a> </td>
+				<td><a href = "#"><img src="img/alphabetLetters/a.png" /></a> </td>
+			</tr>
+			
+			<tr>
+				<td><a href = "#"><img src="img/alphabetLetters/a.png" /></a> </td>
+				<td><a href = "#"><img src="img/alphabetLetters/a.png" /></a> </td>
+				<td><a href = "#"><img src="img/alphabetLetters/a.png" /></a> </td>
+				<td><a href = "#"><img src="img/alphabetLetters/a.png" /></a> </td>
+				<td><a href = "#"><img src="img/alphabetLetters/a.png" /></a> </td>
+				<td><a href = "#"><img src="img/alphabetLetters/a.png" /></a> </td>
+				<td><a href = "#"><img src="img/alphabetLetters/a.png" /></a> </td>
+			</tr>
+			
+			<tr>
+				<td><a href = "#"><img src="img/alphabetLetters/a.png" /></a> </td>
+				<td><a href = "#"><img src="img/alphabetLetters/a.png" /></a> </td>
+				<td><a href = "#"><img src="img/alphabetLetters/a.png" /></a> </td>
+				<td><a href = "#"><img src="img/alphabetLetters/a.png" /></a> </td>
+				<td><a href = "#"><img src="img/alphabetLetters/a.png" /></a> </td>
+				<td><a href = "#"><img src="img/alphabetLetters/a.png" /></a> </td>
+				<td><a href = "#"><img src="img/alphabetLetters/a.png" /></a> </td>
+			</tr>
+			
+			<tr>
+				<td><a href = "#"><img src="img/alphabetLetters/a.png" /></a> </td>
+				<td><a href = "#"><img src="img/alphabetLetters/a.png" /></a> </td>
+				<td><a href = "#"><img src="img/alphabetLetters/a.png" /></a> </td>
+				<td><a href = "#"><img src="img/alphabetLetters/a.png" /></a> </td>
+				<td><a href = "#"><img src="img/alphabetLetters/a.png" /></a> </td>
+			</tr>
+		
+			</table>
+		</div>
+		
+		
+		
+		
+		<script>
+			$("#alphabetlist").hide();
+			$("#videoContainer").show();
+			
+			$("#toggleVideo").click(function(){
+				$("#videoContainer").toggle();
+				$("#alphabetlist").toggle();
+			});
+		
+			// toggle between hiding and showing the dropdown content 	
+			function menuDropdown(){
+				document.getElementById("dropdownList").classList.toggle("show");
+			}		
+			
+			// Close the dropdown if the user clicks outside of it
+			window.onclick = function(event) {
+				if (!event.target.matches('.menuButtonIcon')) {
+					var dropdowns = document.getElementsByClassName("dropdown-content");
+					var i;
+					for (i = 0; i < dropdowns.length; i++) {
+						var openDropdown = dropdowns[i];
+							if (openDropdown.classList.contains('show')) {
+								openDropdown.classList.remove('show');
+							}
+					}
+				}
+			}
+			
+			
+			
+		</script>
+	</body>
+</html>

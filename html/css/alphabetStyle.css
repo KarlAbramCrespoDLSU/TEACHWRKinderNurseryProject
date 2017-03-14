@@ -24,20 +24,54 @@ body {
 	background-color: #f3f3f3;	
 }
 
+.activity{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#activitytitle{
+	margin:auto;
+}
+
+#activitytitle img{
+	width:350px;
+	margin: auto;
+	top: 45px;
+	left: 38%;
+	right: 38%;
+	position:relative;
+}
+
+#activitytext{
+	color: #5AC4BE;
+	font-size: 12vw;
+	font-family: Arial;
+	font-weight: bold;
+	line-height: 90%;
+	padding-top:5%;
+	text-align: center;
+	margin: auto;
+}
+
+
+
+
 /* Controls */
 
 #menuButtonWrapper{
-
 	left: 0%;
 	height: 30px;
 	width: 30px;
-	float: left;
-	position: fixed;
+    float: left;
+    position: relative;
+    display: inline-block;
 }
 
+/*button*/
 .menuButtonIcon {
-	height: 40px;
-	width: 40px;
+	cursor: pointer;
+	height: 35px;
+	width: 35px;
 	margin: 2%;
 	background-color: #DDDDDD;
 	float: left;
@@ -48,13 +82,38 @@ body {
 .menuButtonIcon img {
 	max-width: 20px;
 	max-height: 20px;
-	margin: 10px;
+	margin-top: 10%;
+	margin-right: 10%;
 }
 
 .menuButtonIcon:hover {
 	background-color: #CCCCCC;
 	transition: all 0.5s ease;
 }
+
+#dropdownList {
+	margin-top: 35px;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+	left: 0;
+	overflow: auto;
+}
+
+.dropdown-content a {
+    display: block;
+}
+
+.show { display: block;}
+
 
 #controlBar {
 	width: 100%;
@@ -82,8 +141,8 @@ body {
 }
 
 .effectButton img {
-	max-width: 20px;
-	max-height: 20px;
+	max-width: 24px;
+	max-height: 24px;
 }
 
 .effectButton:hover {
@@ -102,9 +161,9 @@ body {
 }
 
 .navigationButton img {
-	max-width: 10px;
-	max-height: 10px;
-	margin: 5px;
+	max-width: 16px;
+	max-height: 16px;
+	margin: 12px;
 }
 
 .navigationButton:hover {
@@ -119,6 +178,9 @@ body {
 	float: right;
 }
 
+
+
+
 /* Controls END */
 
 #contentWrapper{
@@ -131,7 +193,12 @@ body {
 	float: left;
 	height: 100%;
 	width: 50%;
+	top: 50%;
+	bottom:50%;
+	margin:auto;
+	position:absolute;
 }
+
 
 
 #letterContainer{
@@ -140,11 +207,26 @@ body {
 	width: 50%;
 }
 
-#bigText{
+#bigText, #smallText{
 	color: #5AC4BE;
-	font-size: 35vw;
+	font-size: 25vw;
 	font-family: Arial;
 	font-weight: bold;
 	line-height: 90%;
 	margin-left: 30%;
 }
+
+.mySlides{
+	display: block;
+    margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	top:25%;
+}
+
+#videoContainer{
+	padding-left:45px;
+	margin:auto;
+}
+
+

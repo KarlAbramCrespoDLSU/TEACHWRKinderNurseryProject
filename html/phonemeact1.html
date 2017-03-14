@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<!-- 
+
+TEACHWR S21 AY 2016-2017 TERM 2
+
+Chingcuangco, Rene Jeric
+Crespo, Karl Crespo
+Cruz, Beatriz Francesca
+
+
+ -->
+
+<html>
+	<head>
+		<title>Phonemes and Counting</title> 
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/w3.css" />
+		<link rel = "stylesheet" href = "css/style.css" />
+		<link rel = "stylesheet" href = "css/alphabetStyle.css" />
+		
+	</head>
+	
+	<body>
+		<div id="menuButtonWrapper">
+			<button class="menuButtonIcon" onclick="menuDropdown()"> <img src="img/controlIcons/menuBurger.png" /></button>
+			<div class="dropdown-content" id="dropdownList">
+			  <a href="index.html">Home</a>
+			  <a href="alphabetmenu.html">Alphabet Menu</a>
+			</div>
+		</div> 
+		
+		<div id="activitytitle">
+			<h1 id = "activitytext">Activity Time!</h1>
+			<img src="img/others/sun.png" />
+		</div>
+	
+		<script>
+			// toggle between hiding and showing the dropdown content 	
+			function menuDropdown(){
+				document.getElementById("dropdownList").classList.toggle("show");
+			}		
+			
+			// Close the dropdown if the user clicks outside of it
+			window.onclick = function(event) {
+				if (!event.target.matches('.menuButtonIcon')) {
+					var dropdowns = document.getElementsByClassName("dropdown-content");
+					var i;
+					for (i = 0; i < dropdowns.length; i++) {
+						var openDropdown = dropdowns[i];
+							if (openDropdown.classList.contains('show')) {
+								openDropdown.classList.remove('show');
+							}
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

@@ -24,6 +24,17 @@ body {
 	background-color: #f3f3f3;	
 }
 
+table{
+	margin: auto;
+}
+
+td{
+	padding: 20px;
+}
+
+
+
+
 #centerBlock {
 	margin-left: auto;
 	margin-right: auto;
