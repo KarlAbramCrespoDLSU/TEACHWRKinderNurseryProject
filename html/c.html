@@ -41,6 +41,7 @@ Cruz, Beatriz Francesca
 				
 			</div>
 			<div id = "navigationControlsWrapper">
+				<a href = "phonemeact1.html" class = "navigationButton" ><img src="img/controlIcons/activity.png" /> </a>
 				<a href = "b.html" class = "navigationButton"><img src="img/controlIcons/leftArrow.png" /></a>
 				<a href = "d.html" class = "navigationButton"><img src="img/controlIcons/rightArrow.png" /></a>
 			</div>
@@ -76,6 +77,11 @@ Cruz, Beatriz Francesca
 			<div id = "letterContainer">
 				<span id = "bigText">C</span>
 			</div>
+			
+			<div id = "sketchContainer">
+					<img src="img\writingLetters\letterC.gif" style="width:300px">
+			</div>
+			
 		</div>
 		
 		<!--
@@ -133,6 +139,7 @@ Cruz, Beatriz Francesca
 			
 			
 			$("#contentWrapper").hide();
+			$("#sketchContainer").hide();
 			$("#videoContainer").show();
 			
 			$("#toggleVideo").click(function(){
@@ -143,6 +150,15 @@ Cruz, Beatriz Francesca
 				else{
 					$("#videoContainer").css("display","none");
 					$("#contentWrapper").css("display","block");
+				}
+			});
+			
+			$("#toggleDrawing").click(function(){
+				if($("#sketchContainer").css("display") == "none"){
+				    $("#sketchContainer").show();
+				}
+				else{
+				    $("#sketchContainer").hide();
 				}
 			});
 			

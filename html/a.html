@@ -17,7 +17,6 @@ Cruz, Beatriz Francesca
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<script src = "js/jquery-3.1.1.min.js"></script>
-		<script src = "js/canvas.js"></script>
 		<link rel="stylesheet" href="css/w3.css" />
 		<link rel = "stylesheet" href = "css/alphabetStyle.css" />
 		
@@ -42,6 +41,7 @@ Cruz, Beatriz Francesca
 				
 			</div>
 			<div id = "navigationControlsWrapper">
+				<a href = "phonemeact1.html" class = "navigationButton" ><img src="img/controlIcons/activity.png" /> </a>
 				<a href = "z.html" class = "navigationButton"><img src="img/controlIcons/leftArrow.png" /></a>
 				<a href = "b.html" class = "navigationButton"><img src="img/controlIcons/rightArrow.png" /></a>
 			</div>
@@ -77,8 +77,7 @@ Cruz, Beatriz Francesca
 			</div>
 			
 			<div id = "sketchContainer">
-			<canvas id="simple_sketch" width="300" height="300"></canvas>
-					<img src="img\writingLetters\writingA.jpg" style="width:300px">
+					<img src="img\writingLetters\letterA.gif" style="width:300px">
 			</div>
 		</div>
 		
@@ -91,7 +90,6 @@ Cruz, Beatriz Francesca
 			//slideshow
 					
 			var slideIndex = 1;
-			var sketchLetter = Sketch.create
 			showDivs(slideIndex);
 
 			function plusDivs(n) {
@@ -108,8 +106,7 @@ Cruz, Beatriz Francesca
 				}
 				x[slideIndex-1].style.display = "block"; 
 			}
-					
-					
+				
 			// toggle between hiding and showing the dropdown content 	
 			function menuDropdown(){
 				document.getElementById("dropdownList").classList.toggle("show");
@@ -128,15 +125,15 @@ Cruz, Beatriz Francesca
 					}
 				}
 			}
-
 				
-			$("#imageSlideshowContainer").hide();				
-				
+					
+			$("#imageSlideshowContainer").hide();
+					
 			$("#toggleSlideshow").click(function(){
 				$("#imageSlideshowContainer").toggle();
 			});
 			
-		
+			
 			$("#contentWrapper").hide();
 			$("#sketchContainer").hide();
 			$("#videoContainer").show();
@@ -153,9 +150,12 @@ Cruz, Beatriz Francesca
 			});
 			
 			$("#toggleDrawing").click(function(){
-			
-			$('#simple_sketch').sketch();
-			
+				if($("#sketchContainer").css("display") == "none"){
+				    $("#sketchContainer").show();
+				}
+				else{
+				    $("#sketchContainer").hide();
+				}
 			});
 			
 			$("#bigText").show();
