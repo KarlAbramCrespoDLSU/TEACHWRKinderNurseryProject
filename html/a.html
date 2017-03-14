@@ -17,6 +17,7 @@ Cruz, Beatriz Francesca
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<script src = "js/jquery-3.1.1.min.js"></script>
+		<script src = "js/canvas.js"></script>
 		<link rel="stylesheet" href="css/w3.css" />
 		<link rel = "stylesheet" href = "css/alphabetStyle.css" />
 		
@@ -74,6 +75,11 @@ Cruz, Beatriz Francesca
 			<div id = "letterContainer">
 				<span id = "bigText">A</span>
 			</div>
+			
+			<div id = "sketchContainer">
+			<canvas id="simple_sketch" width="300" height="300"></canvas>
+					<img src="img\writingLetters\writingA.jpg" style="width:300px">
+			</div>
 		</div>
 		
 		<!--
@@ -85,6 +91,7 @@ Cruz, Beatriz Francesca
 			//slideshow
 					
 			var slideIndex = 1;
+			var sketchLetter = Sketch.create
 			showDivs(slideIndex);
 
 			function plusDivs(n) {
@@ -131,6 +138,7 @@ Cruz, Beatriz Francesca
 			
 		
 			$("#contentWrapper").hide();
+			$("#sketchContainer").hide();
 			$("#videoContainer").show();
 			
 			$("#toggleVideo").click(function(){
@@ -144,6 +152,11 @@ Cruz, Beatriz Francesca
 				}
 			});
 			
+			$("#toggleDrawing").click(function(){
+			
+			$('#simple_sketch').sketch();
+			
+			});
 			
 			$("#bigText").show();
 			$("#smallText").hide();		
