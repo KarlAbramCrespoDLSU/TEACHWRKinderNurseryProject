@@ -26,9 +26,6 @@ Cruz, Beatriz Francesca
 			number = document.getElementById('bigNumber');	// get value from span bigNumber
 			
 		
-			function countImages(){
-				
-			}
 			
 			function incrementNumber(){
 				number++;	// increment value
@@ -73,31 +70,45 @@ Cruz, Beatriz Francesca
 	
 		<div id = "controlBar">
 			<div id = "effectControlsWrapper">
-				<button class = "effectButton" ><img src="img/controlIcons/speak.png" /></a>
+				<button id = "toggleVideo" class = "effectButton" ><img src="img/controlIcons/video.png" />
 				<button id = "toggleImgCounter" class = "effectButton" ><img src="img/controlIcons/pictures.png" /></a>
-				<button class = "effectButton" ><img src="img/controlIcons/case.png" /></a>
+				<button id = "toggleDigitCounter" class = "effectButton" ><img src="img/controlIcons/case.png" /></a>
 			</div>
 			<div id = "navigationControlsWrapper">
 				<button class = "navigationButton" onClick = "decrementNumber()"><img src="img/controlIcons/leftArrow.png" /></a>
 				<button class = "navigationButton" onClick = "incrementNumber()"><img src="img/controlIcons/rightArrow.png" /></a>
 			</div>
+			
+		</div>
+		
+		<div id="videoContainer">
+			<video width="95%" height="570" controls>
+				<source src="vid/placeholdervid.mp4" type="video/mp4">
+			</video>
 		</div>
 		
 		<div id = "contentWrapper">
 			<!-- Insert Code here -->
 			<div id = "countingImgContainer">
-				
 			</div>
 			
 			<div id = "numbercontainer">
 				<span id = "bigNumber">0</span>
 			</div>
+			
 		</div>
 		<script>
-			$("#countingImgContainer").hide();
+			$("#numbercontainer").hide();
+			$("#videoContainer").show();
 			
+			$("#toggleDigitCounter").click(function(){
+				$("#numbercontainer").toggle();
+			});
 			$("#toggleImgCounter").click(function(){
 				$("#countingImgContainer").toggle();
+			});
+			$("#toggleVideo").click(function(){
+				$("#videoContainer").toggle();
 			});
 		</script>
 	</body>
