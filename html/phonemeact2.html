@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<!-- 
+
+TEACHWR S21 AY 2016-2017 TERM 2
+
+Chingcuangco, Rene Jeric
+Crespo, Karl Crespo
+Cruz, Beatriz Francesca
+
+
+ -->
+
+ <!--COLORING ACTIVITY-->
+<html>
+	<head>
+		<title>Phonemes and Counting</title> 
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/w3.css" />
+		<link rel = "stylesheet" href = "css/style.css" />
+		<link rel = "stylesheet" href = "css/alphabetStyle.css" />
+		<script src = "js/jquery-3.1.1.min.js"></script>
+		
+	</head>
+	
+	<body>
+		<div id="instruction">
+			<text> Color the pictures that start with the letter.</text>
+		</div>
+	
+		<div id= "coloringPage">
+		
+		</div>
+	
+		<div id="menuButtonWrapper">
+			<button class="menuButtonIcon"> <img src="img/controlIcons/menuBurger.png" /></button>
+			<div class="dropdown-content" id="dropdownList">
+			  <a href="index.html">Home</a>
+			  <a href="alphabetmenu.html">Menu</a>
+			  <a href="phonemeact1.html">Phoneme Activities</a>
+			</div>
+		</div> 
+		
+		<div id= "controlBar">
+			<div id= "navigationControlsWrapper">
+				<button id = "coloringBtn" class = "navigationButton"><img src="img/controlIcons/rightArrow.png" /></button>
+			</div>
+		</div>
+	
+		<script>
+			$("#instruction").css("display","block");
+			
+			$(".menuButtonIcon").click(function menuDropdown(){
+				if($("#dropdownList").css("display") == "none"){
+						$("#dropdownList").css("display","block");
+					}
+					else {
+						$("#dropdownList").css("display","none");
+					}
+			});		
+			
+			// Close the dropdown if the user clicks outside of it
+			window.onclick = function(event) {
+				if (!event.target.matches('#menuButtonWrapper')) {
+					var dropdowns = document.getElementsByClassName("dropdown-content");
+					var i;
+					for (i = 0; i < dropdowns.length; i++) {
+						var openDropdown = dropdowns[i];
+							if (openDropdown.classList.contains('show')) {
+								openDropdown.classList.remove('show');
+							}
+					}
+				}
+			}
+			
+			$("#coloringBtn").click(function(){
+				$("#coloringPage").css("display","block");
+				$("#instruction").css("display","none");
+			});
+		</script>
+	</body>
+</html>
