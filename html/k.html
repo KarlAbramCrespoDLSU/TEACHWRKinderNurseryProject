@@ -31,6 +31,10 @@ Cruz, Beatriz Francesca
 		</div>
 		
 		
+		<div id = "titleSection">
+				<text id = "titleTag">The Letter K!</text>
+				</div>
+		
 		
 		<div id = "contentWrapper">
 			<!-- Insert Code here -->
@@ -63,6 +67,14 @@ Cruz, Beatriz Francesca
 			<button class="w3-button w3-display-right" onClick="plusGifs(+1)">&#10095;</button>	
 		</div>
 	
+		
+		<div id = "writingContainer">
+			<img src="img\animatedLetterGIFs\K\K no guideline.gif" class="writinggif"/>
+			<img src="img\animatedLetterGIFs\K\small k no guideline.gif" class="writinggif"/>
+				
+			<button class="w3-button w3-display-left" onClick="plusGifs(-1)">&#10094;</button>
+			<button class="w3-button w3-display-right" onClick="plusGifs(+1)">&#10095;</button>	
+		</div>
 	
 		<div id="menuButtonWrapper">
 			<button class="menuButtonIcon" > <img src="img/controlIcons/menuBurger.png" /></button>
@@ -79,6 +91,7 @@ Cruz, Beatriz Francesca
 				<button id = "toggleSlideshow" class = "effectButton"><img src="img/controlIcons/pictures.png" /></button>
 				<button id = "toggleCase" class = "effectButton"  ><img src="img/controlIcons/case.png" /></button>
 				<button id = "toggleDrawing" class = "effectButton" ><img src="img/controlIcons/pencil.png" /></button>
+				<button id = "toggleWriting" class = "effectButton" ><img src="img/controlIcons/pencil.png" /></button>
 				
 			</div>
 			<div id = "navigationControlsWrapper">
@@ -146,6 +159,7 @@ Cruz, Beatriz Francesca
 			$("#imageSlideshowContainer").hide();
 			$("#contentWrapper").hide();
 			$("#sketchContainer").hide();
+			$("#writingContainer").hide();
 			$("#videoContainer").show();
 			$("#bigText").show();
 			
@@ -165,6 +179,7 @@ Cruz, Beatriz Francesca
 				if($("#videoContainer").css("display") == "none"){
 					$("#videoContainer").css("display","block");
 					$("#contentWrapper").css("display","none");
+					$("#writingContainer").css("display","none");
 					$("#sketchContainer").css("display","none");
 				}
 				else{
@@ -200,16 +215,35 @@ Cruz, Beatriz Francesca
 				if($("#sketchContainer").css("display") == "none"){
 					$("#sketchContainer").css("display","block");
 					$("#contentWrapper").css("display","none");
+					$("#writingContainer").css("display","none");
 					$("#videoContainer").css("display","none");
 					$("#bigText").css("display","none");
 				}
 				else{
 				    $("#sketchContainer").css("display","none");
 					$("#contentWrapper").css("display","block");
+					$("#writingContainer").css("display","none");
 					$("#videoContainer").css("display","none");
 					$("#bigText").css("display","block");
 				}
 			});
+			
+			$("#toggleWriting").click(function(){
+				if($("#writingContainer").css("display") == "none"){
+					$("#writingContainer").css("display","block");
+					$("#contentWrapper").css("display","none");
+					$("#videoContainer").css("display","none");
+					$("#sketchContainer").css("display","none");
+					$("#bigText").css("display","none");
+				}
+				else{
+				    $("#writingContainer").css("display","none");
+					$("#contentWrapper").css("display","block");
+					$("#videoContainer").css("display","none");
+					$("#bigText").css("display","block");
+				}
+			});
+			
 
 			
 			var gifIndex = 1;
@@ -222,7 +256,7 @@ Cruz, Beatriz Francesca
 			function showGifs(n) {
 				var i;
 				var x = document.getElementsByClassName("writinggif");
-				if (n > x.length) {gifIndex = 1} 
+				if (n > ((x.length)-2)) {gifIndex = 1} 
 				if (n < 1) {gifIndex = x.length} ;
 				for (i = 0; i < x.length; i++) {
 					x[i].style.display = "none"; 
