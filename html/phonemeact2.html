@@ -25,18 +25,7 @@ Cruz, Beatriz Francesca
 	</head>
 	
 	<body>
-		<div id = "titleSection">
-				<text id = "titleTag">Coloring Activity!</text>
-				</div>
 		
-		<div id="instruction">
-			<text> Color the pictures that start with the letter.</text>
-		</div>
-	
-		<div id= "coloringPage">
-		
-		</div>
-	
 		<div id="menuButtonWrapper">
 			<button class="menuButtonIcon"> <img src="img/controlIcons/menuBurger.png" /></button>
 			<div class="dropdown-content" id="dropdownList">
@@ -46,11 +35,35 @@ Cruz, Beatriz Francesca
 			</div>
 		</div> 
 		
+		<div id = "menuTitleWrapper">
+			<h5 class = "titleText">Color the pictures that start with the given letter.</h5>
+		</div>
+		
 		<div id= "controlBar">
 			<div id= "navigationControlsWrapper">
 				<button id = "coloringBtn" class = "navigationButton"><img src="img/controlIcons/rightArrow.png" /></button>
 			</div>
 		</div>
+	
+		<div id= "coloringPageWrapper">
+			<div id = "coloringPageSlideshowImage">
+				<div class = "w3-content w3-display-container coloringPageImageSlideshow">
+					<img class="mySlides" src="img/alphabetWords/a/ant.png"/>
+					<img class="mySlides" src="img/alphabetWords/a/apple.png"/>
+					<img class="mySlides" src="img/alphabetWords/a/anchor.png"/>
+					
+					<button class="w3-button w3-display-left" onClick="plusDivs(-1)">&#10094;</button>
+					<button class="w3-button w3-display-right" onClick="plusDivs(+1)">&#10095;</button>			
+				</div>
+						
+			</div>
+			
+				<h1 class = "coloringPageSlideshowText">Test</h1>
+		</div>
+		
+		
+	
+		
 	
 		<script>
 			$("#instruction").css("display","block");
@@ -82,6 +95,27 @@ Cruz, Beatriz Francesca
 				$("#coloringPage").css("display","block");
 				$("#instruction").css("display","none");
 			});
+			
+			//slideshow
+			
+			var slideIndex = 1;
+			showDivs(slideIndex);
+
+			function plusDivs(n) {
+				showDivs(slideIndex += n);
+			}
+
+			function showDivs(n) {
+				var i;
+				var x = document.getElementsByClassName("mySlides");
+				if (n > x.length) {slideIndex = 1} 
+				if (n < 1) {slideIndex = x.length} ;
+				for (i = 0; i < x.length; i++) {
+					x[i].style.display = "none"; 
+				}
+				x[slideIndex-1].style.display = "block"; 
+			}
+			
 		</script>
 	</body>
 </html>
