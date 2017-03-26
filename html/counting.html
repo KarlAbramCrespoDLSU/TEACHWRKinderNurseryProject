@@ -20,46 +20,6 @@ Cruz, Beatriz Francesca
 		<link rel="stylesheet" href="css/w3.css" />
 		<link rel = "stylesheet" href = "css/countingStyle.css" />
 		
-		<script>
-			var number;
-			
-			number = document.getElementById('bigNumber');	// get value from span bigNumber
-			
-		
-			
-			function incrementNumber(){
-				number++;	// increment value
-				document.getElementById("bigNumber").textContent = number; // change value
-				$("#countingImgContainer").html(""); // reset popsicles to 0
-				
-				
-				console.log(number);
-				
-				for (var i = 0; i < number; i++){
-					$("#countingImgContainer").append("<img src = 'img/countingImgs/popsicle.png'> ");
-					console.log("Test");
-				}
-			}
-			
-			function decrementNumber(){
-				if(number > 0){
-				
-					number--;
-					document.getElementById("bigNumber").textContent = number;
-					$("#countingImgContainer").html(""); // reset popsicles to 0
-					
-					for (var i = 0; i < number; i++){
-					$("#countingImgContainer").append("<img src = 'img/countingImgs/popsicle.png'> ");
-					console.log("Test");
-				}
-				}
-				else{
-					// do nothing
-				}
-			}
-			
-			
-		</script>
 		
 	</head>
 	<body>
@@ -68,84 +28,48 @@ Cruz, Beatriz Francesca
 			<a href = "index.html" class = "menuButtonIcon" ><img src="img/controlIcons/menuBurger.png" /></a>
 		</div>
 	
-		<div id = "titleSection">
-				<text id = "titleTag">The Counting Page!</text>
-				</div>
+		<div id = "menuTitleWrapper">
+			<h5 class = "titleText">The Counting Menu</h5>
+		</div>
 		
 		<div id = "controlBar">
 			<div id = "effectControlsWrapper">
 				<button id = "toggleVideo" class = "effectButton" ><img src="img/controlIcons/video.png" />
+				<button id = "toggle10" class = "effectButton" onclick = "makeInto10()"><img src="img/controlIcons/10.png" /></a>
+				<button id = "toggle20" class = "effectButton" onclick = "makeInto20()"><img src="img/controlIcons/20.png" /></a>
 			</div>
 			<div id = "navigationControlsWrapper">
 				<a href = "countingact1.html" class = "navigationButton" ><img src="img/controlIcons/activity.png" /> </a>
-				<button class = "navigationButton" onClick = "decrementNumber()"><img src="img/controlIcons/leftArrow.png" /></a>
-				<button class = "navigationButton" onClick = "incrementNumber()"><img src="img/controlIcons/rightArrow.png" /></a>
 			</div>
 			
 		</div>
 		
 		<div id="videoContainer">
-			<video width="95%" height="570" controls>
+			<video width="1280" height="570" controls>
 				<source src="vid/placeholdervid.mp4" type="video/mp4">
 			</video>
 		</div>
-		
-		<div id="numberlist"> 
-			<table> 
-			<tr>
-				<td><img src="img/countingImgs/num01.jpg"/> </td>
-				<td><img src="img/countingImgs/num02.jpg"/> </td>
-				<td><img src="img/countingImgs/num03.jpg"/> </td>
-				<td><img src="img/countingImgs/num04.jpg"/> </td>
-				<td><img src="img/countingImgs/num05.jpg"/> </td>
-			</tr>
-			<tr>
-				<td><img src="img/countingImgs/num06.jpg"/> </td>
-				<td><img src="img/countingImgs/num07.jpg"/> </td>
-				<td><img src="img/countingImgs/num08.jpg"/> </td>
-				<td><img src="img/countingImgs/num09.jpg"/> </td>
-				<td><img src="img/countingImgs/num10.jpg"/> </td>
-			</tr>
-			<tr>
-				<td><img src="img/countingImgs/num11.jpg"/> </td>
-				<td><img src="img/countingImgs/num12.jpg"/> </td>
-				<td><img src="img/countingImgs/num13.jpg"/> </td>
-				<td><img src="img/countingImgs/num14.jpg"/> </td>
-				<td><img src="img/countingImgs/num15.jpg"/> </td>
-			</tr>
-			<tr>
-				<td><img src="img/countingImgs/num16.jpg"/> </td>
-				<td><img src="img/countingImgs/num17.jpg"/> </td>
-				<td><img src="img/countingImgs/num18.jpg"/> </td>
-				<td><img src="img/countingImgs/num19.jpg"/> </td>
-				<td><img src="img/countingImgs/num20.jpg"/> </td>
-			</tr>
-			</table>
+		<div id = "contentWrapper">
+			<div id = "numberListContainer">
+				<p class = "countingNumber">1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20</p>
+			</div>
 		</div>
-		
-		
 		<script>
-			$("#numberlist").hide();
-			$("#videoContainer").show();
+			$("#numberListContainer").toggle();
 			
+		
 			$("#toggleVideo").click(function(){
 				$("#videoContainer").toggle();
-				$("#numberlist").toggle();
+				$("#numberListContainer").toggle();
 			});
 			
-			// Close the dropdown if the user clicks outside of it
-			window.onclick = function(event) {
-				if (!event.target.matches('#menuButtonWrapper')) {
-					var dropdowns = document.getElementsByClassName("dropdown-content");
-					var i;
-					for (i = 0; i < dropdowns.length; i++) {
-						var openDropdown = dropdowns[i];
-							if (openDropdown.classList.contains('show')) {
-								openDropdown.classList.remove('show');
-							}
-					}
-				}
+			function makeInto10(){
+				$("#numberListContainer").html(" <p class = 'countingNumber'>1 2 3 4 5 6 7 8 9 10</p>"); 
 			}
+			function makeInto20(){
+				$("#numberListContainer").html(" <p class = 'countingNumber'>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20</p>"); 
+			}
+		
 		</script>
 	</body>
 	

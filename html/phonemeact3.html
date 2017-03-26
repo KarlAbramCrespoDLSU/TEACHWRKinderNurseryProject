@@ -22,6 +22,177 @@ Cruz, Beatriz Francesca
 		<link rel = "stylesheet" href = "css/alphabetStyle.css"/>
 		<script src = "js/jquery-3.1.1.min.js"></script>
 		
+		<script>
+		
+		function displayNewLetter() {
+			var selectedLetter = document.getElementById("selectLetter");
+			var strUser = selectedLetter.options[selectedLetter.selectedIndex].value;
+			console.log(strUser);
+			
+			switch(strUser){
+				default:
+				case 'a':
+					$("#tracingGifsA").show();
+					$("#tracingGifsB").hide();
+					$("#tracingGifsC").hide();
+					$("#tracingGifsD").hide();
+					$("#tracingGifsE").hide();
+					$("#tracingGifsI").hide();
+					$("#tracingGifsO").hide();
+					$("#tracingGifsU").hide();
+					$("#tracingGifsK").hide();
+					$("#tracingGifsL").hide();
+					$("#tracingGifsM").hide();
+					break;
+				case 'b':
+					$("#tracingGifsA").hide();
+					$("#tracingGifsB").show();
+					$("#tracingGifsC").hide();
+					$("#tracingGifsD").hide();
+					$("#tracingGifsE").hide();
+					$("#tracingGifsI").hide();
+					$("#tracingGifsO").hide();
+					$("#tracingGifsU").hide();
+					$("#tracingGifsK").hide();
+					$("#tracingGifsL").hide();
+					$("#tracingGifsM").hide();
+					break;
+				case 'c':
+					$("#tracingGifsA").hide();
+					$("#tracingGifsB").hide();
+					$("#tracingGifsC").show();
+					$("#tracingGifsD").hide();
+					$("#tracingGifsE").hide();
+					$("#tracingGifsI").hide();
+					$("#tracingGifsO").hide();
+					$("#tracingGifsU").hide();
+					$("#tracingGifsK").hide();
+					$("#tracingGifsL").hide();
+					$("#tracingGifsM").hide();
+					break;
+				case 'd':
+					$("#tracingGifsA").hide();
+					$("#tracingGifsB").hide();
+					$("#tracingGifsC").hide();
+					$("#tracingGifsD").show();
+					$("#tracingGifsE").hide();
+					$("#tracingGifsI").hide();
+					$("#tracingGifsO").hide();
+					$("#tracingGifsU").hide();
+					$("#tracingGifsK").hide();
+					$("#tracingGifsL").hide();
+					$("#tracingGifsM").hide();
+					break;
+				case 'e':
+					$("#tracingGifsA").hide();
+					$("#tracingGifsB").hide();
+					$("#tracingGifsC").hide();
+					$("#tracingGifsD").hide();
+					$("#tracingGifsE").show();
+					$("#tracingGifsI").hide();
+					$("#tracingGifsO").hide();
+					$("#tracingGifsU").hide();
+					$("#tracingGifsK").hide();
+					$("#tracingGifsL").hide();
+					$("#tracingGifsM").hide();
+					break;
+				case 'i':
+					$("#tracingGifsA").hide();
+					$("#tracingGifsB").hide();
+					$("#tracingGifsC").hide();
+					$("#tracingGifsD").hide();
+					$("#tracingGifsE").hide();
+					$("#tracingGifsI").show();
+					$("#tracingGifsO").hide();
+					$("#tracingGifsU").hide();
+					$("#tracingGifsK").hide();
+					$("#tracingGifsL").hide();
+					$("#tracingGifsM").hide();
+					break;
+				case 'o':
+					$("#tracingGifsA").hide();
+					$("#tracingGifsB").hide();
+					$("#tracingGifsC").hide();
+					$("#tracingGifsD").hide();
+					$("#tracingGifsE").hide();
+					$("#tracingGifsI").hide();
+					$("#tracingGifsO").show();
+					$("#tracingGifsU").hide();
+					$("#tracingGifsK").hide();
+					$("#tracingGifsL").hide();
+					$("#tracingGifsM").hide();
+					break;
+				case 'u':
+					$("#tracingGifsA").hide();
+					$("#tracingGifsB").hide();
+					$("#tracingGifsC").hide();
+					$("#tracingGifsD").hide();
+					$("#tracingGifsE").hide();
+					$("#tracingGifsI").hide();
+					$("#tracingGifsO").hide();
+					$("#tracingGifsU").show();
+					$("#tracingGifsK").hide();
+					$("#tracingGifsL").hide();
+					$("#tracingGifsM").hide();
+					break;
+				case 'k':
+					$("#tracingGifsA").hide();
+					$("#tracingGifsB").hide();
+					$("#tracingGifsC").hide();
+					$("#tracingGifsD").hide();
+					$("#tracingGifsE").hide();
+					$("#tracingGifsI").hide();
+					$("#tracingGifsO").hide();
+					$("#tracingGifsU").hide();
+					$("#tracingGifsK").show();
+					$("#tracingGifsL").hide();
+					$("#tracingGifsM").hide();
+					break;
+				case 'l':
+					$("#tracingGifsA").hide();
+					$("#tracingGifsB").hide();
+					$("#tracingGifsC").hide();
+					$("#tracingGifsD").hide();
+					$("#tracingGifsE").hide();
+					$("#tracingGifsI").hide();
+					$("#tracingGifsO").hide();
+					$("#tracingGifsU").hide();
+					$("#tracingGifsK").hide();
+					$("#tracingGifsL").show();
+					$("#tracingGifsM").hide();
+					break;
+				case 'm':
+					$("#tracingGifsA").hide();
+					$("#tracingGifsB").hide();
+					$("#tracingGifsC").hide();
+					$("#tracingGifsD").hide();
+					$("#tracingGifsE").hide();
+					$("#tracingGifsI").hide();
+					$("#tracingGifsO").hide();
+					$("#tracingGifsU").hide();
+					$("#tracingGifsK").hide();
+					$("#tracingGifsL").hide();
+					$("#tracingGifsM").show();
+					break;
+			}
+		}
+		
+		function initializeDrawingLetterPage(){
+			$("#tracingGifsA").show();
+			$("#tracingGifsB").hide();
+			$("#tracingGifsC").hide();
+			$("#tracingGifsD").hide();
+			$("#tracingGifsE").hide();
+			$("#tracingGifsI").hide();
+			$("#tracingGifsO").hide();
+			$("#tracingGifsU").hide();
+			$("#tracingGifsK").hide();
+			$("#tracingGifsL").hide();
+			$("#tracingGifsM").hide();
+		}
+		
+		</script>
+		
 	</head>
 	
 	<body>
@@ -43,7 +214,9 @@ Cruz, Beatriz Francesca
 			<!--
 				Jquery to change html 
 			-->
-			<div id="navigationControlsWrapper"><select>
+			<div id="navigationControlsWrapper">
+				<button id = "coloringBtn" class = "effectButton" onclick="displayNewLetter()"><img src="img/controlIcons/refresh.png" /></button>
+				<select id = "selectLetter">
 					<option value="a">A</option>
 					<option value="b">B</option>
 					<option value="c">C</option>
@@ -71,6 +244,7 @@ Cruz, Beatriz Francesca
 					<option value="y">Y</option>
 					<option value="z">Z</option>
 				</select>
+				
 			</div>
 			<div id="effectControlsWrapper">
 				<button id ="toggle1" class="effectButton"><img src="img/controlIcons/guidelineLetter.png" /></button>
@@ -85,24 +259,90 @@ Cruz, Beatriz Francesca
 			
 			
 			<div id="tracingGifs">
-				<img id="img1" src="img\animatedLetterGIFs\A\A.gif" class "writinggif"/>
-				<img id="img2" src="img\animatedLetterGIFs\A\small a.gif" class "writinggif"/>
-				<img id="img3" src="img\animatedLetterGIFs\A\A no guideline.gif" class "writinggif"/>
-				<img id="img4" src="img\animatedLetterGIFs\A\small a no guideline.gif" class "writinggif"/>
-				
+				<div id = "tracingGifsA">
+					<img src="img\animatedLetterGIFs\A\A.gif" class = "img1 writinggif"/>
+					<img src="img\animatedLetterGIFs\A\small a.gif" class = "img2 writinggif"/>
+					<img id="img3" src="img\animatedLetterGIFs\A\A no guideline.gif" class = "img3 writinggif"/>
+					<img id="img4" src="img\animatedLetterGIFs\A\small a no guideline.gif" class = "img4 writinggif"/>
+				</div>
+				<div id = "tracingGifsB">
+					<img src="img\animatedLetterGIFs\B\B.gif" class = "img1 writinggif"/>
+					<img src="img\animatedLetterGIFs\B\small b.gif" class = "img2 writinggif"/>
+					<img src="img\animatedLetterGIFs\B\B no guideline.gif" class = "img3 writinggif"/>
+					<img src="img\animatedLetterGIFs\B\small b no guideline.gif" class = "img4 writinggif"/>
+				</div>
+				<div id = "tracingGifsC">
+					<img src="img\animatedLetterGIFs\C\C.gif" class = "img1 writinggif"/>
+					<img src="img\animatedLetterGIFs\C\small c.gif" class = "img2 writinggif"/>
+					<img src="img\animatedLetterGIFs\C\C no guideline.gif" class = "img3 writinggif"/>
+					<img src="img\animatedLetterGIFs\C\small c no guideline.gif" class = "img4 writinggif"/>
+				</div>
+				<div id = "tracingGifsD">
+					<img src="img\animatedLetterGIFs\D\D.gif" class = "img1 writinggif"/>
+					<img src="img\animatedLetterGIFs\D\small d.gif" class = "img2 writinggif"/>
+					<img src="img\animatedLetterGIFs\D\D no guideline.gif" class = "img3 writinggif"/>
+					<img src="img\animatedLetterGIFs\D\small d no guideline.gif" class = "img4 writinggif"/>
+				</div>
+				<div id = "tracingGifsE">
+					<img src="img\animatedLetterGIFs\E\E.gif" class = "img1 writinggif"/>
+					<img src="img\animatedLetterGIFs\E\small e.gif" class = "img2 writinggif"/>
+					<img src="img\animatedLetterGIFs\E\E no guideline.gif" class = "img3 writinggif"/>
+					<img src="img\animatedLetterGIFs\E\small e no guideline.gif" class = "img4 writinggif"/>
+				</div>
+				<div id = "tracingGifsI">
+					<img src="img\animatedLetterGIFs\I\I.gif" class = "img1 writinggif"/>
+					<img src="img\animatedLetterGIFs\I\small i.gif" class = "img2 writinggif"/>
+					<img src="img\animatedLetterGIFs\I\I no guideline.gif" class = "img3 writinggif"/>
+					<img src="img\animatedLetterGIFs\I\small i no guideline.gif" class = "img4 writinggif"/>
+				</div>
+				<div id = "tracingGifsO">
+					<img src="img\animatedLetterGIFs\O\O.gif" class = "img1 writinggif"/>
+					<img src="img\animatedLetterGIFs\O\small o.gif" class = "img2 writinggif"/>
+					<img src="img\animatedLetterGIFs\O\O no guideline.gif" class = "img3 writinggif"/>
+					<img src="img\animatedLetterGIFs\O\small o no guideline.gif" class = "img4 writinggif"/>
+				</div>
+				<div id = "tracingGifsU">
+					<img src="img\animatedLetterGIFs\U\U.gif" class = "img1 writinggif"/>
+					<img src="img\animatedLetterGIFs\U\small u.gif" class = "img2 writinggif"/>
+					<img src="img\animatedLetterGIFs\U\U no guideline.gif" class = "img3 writinggif"/>
+					<img src="img\animatedLetterGIFs\U\small u no guideline.gif" class = "img4 writinggif"/>
+				</div>
+				<div id = "tracingGifsK">
+					<img src="img\animatedLetterGIFs\K\K.gif" class = "img1 writinggif"/>
+					<img src="img\animatedLetterGIFs\K\small k.gif" class = "img2 writinggif"/>
+					<img src="img\animatedLetterGIFs\K\K no guideline.gif" class = "img3 writinggif"/>
+					<img src="img\animatedLetterGIFs\K\small k no guideline.gif" class = "img4 writinggif"/>
+				</div>
+				<div id = "tracingGifsL">
+					<img src="img\animatedLetterGIFs\L\L.gif" class = "img1 writinggif"/>
+					<img src="img\animatedLetterGIFs\L\small l.gif" class = "img2 writinggif"/>
+					<img src="img\animatedLetterGIFs\L\L no guideline.gif" class = "img3 writinggif"/>
+					<img src="img\animatedLetterGIFs\L\small l no guideline.gif" class = "img4 writinggif"/>
+				</div>
+				<div id = "tracingGifsM">
+					<img src="img\animatedLetterGIFs\M\M.gif" class = "img1 writinggif"/>
+					<img src="img\animatedLetterGIFs\M\small m.gif" class = "img2 writinggif"/>
+					<img src="img\animatedLetterGIFs\M\M no guideline.gif" class = "img3 writinggif"/>
+					<img src="img\animatedLetterGIFs\M\small m no guideline.gif" class = "img4 writinggif"/>
+				</div>
 			</div>
 			
 			
 	
-		
+	
 	
 		<script>
+			initializeDrawingLetterPage();
+			displayNewLetter();
+			
+			
+		
 			$("#instruction").css("display","block");
 			$("#tracingPage").css("display","none");
-			$("#img1").css("display","none");
-			$("#img2").css("display","none");
-			$("#img3").css("display","none");
-			$("#img4").css("display","none");
+			$(".img1").css("display","block");
+			$(".img2").css("display","none");
+			$(".img3").css("display","none");
+			$(".img4").css("display","none");
 			
 			$(".menuButtonIcon").click(function menuDropdown(){
 				if($("#dropdownList").css("display") == "none"){
@@ -133,31 +373,31 @@ Cruz, Beatriz Francesca
 			});
 			
 			$("#toggle1").click(function(){
-					$("#img1").css("display","block");
-					$("#img2").css("display","none");
-					$("#img3").css("display","none");
-					$("#img4").css("display","none");
+					$(".img1").css("display","block");
+					$(".img2").css("display","none");
+					$(".img3").css("display","none");
+					$(".img4").css("display","none");
 			});
 			
 			$("#toggle2").click(function(){
-					$("#img2").css("display","block");
-					$("#img1").css("display","none");
-					$("#img3").css("display","none");
-					$("#img4").css("display","none");
+					$(".img2").css("display","block");
+					$(".img1").css("display","none");
+					$(".img3").css("display","none");
+					$(".img4").css("display","none");
 			});
 			
 			$("#toggle3").click(function(){
-					$("#img3").css("display","block");
-					$("#img2").css("display","none");
-					$("#img1").css("display","none");
-					$("#img4").css("display","none");
+					$(".img3").css("display","block");
+					$(".img2").css("display","none");
+					$(".img1").css("display","none");
+					$(".img4").css("display","none");
 			});
 			
 			$("#toggle4").click(function(){
-					$("#img4").css("display","block");
-					$("#img2").css("display","none");
-					$("#img3").css("display","none");
-					$("#img1").css("display","none");
+					$(".img4").css("display","block");
+					$(".img2").css("display","none");
+					$(".img3").css("display","none");
+					$(".img1").css("display","none");
 			});
 		</script>
 	</body>

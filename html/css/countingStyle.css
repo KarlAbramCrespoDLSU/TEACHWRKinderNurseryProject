@@ -26,6 +26,45 @@ body {
 	background-color: #f3f3f3;	
 }
 
+.activity{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#activitytitle{
+	margin:auto;
+}
+
+#activitytitle img{
+	width:350px;
+	margin: auto;
+	top: 45px;
+	left: 38%;
+	right: 38%;
+	position:relative;
+}
+
+#activitytext{
+	color: #5AC4BE;
+	font-size: 12vw;
+	font-family: Arial;
+	font-weight: bold;
+	line-height: 90%;
+	padding-top:5%;
+	text-align: center;
+	margin: auto;
+}
+
+#menuTitleWrapper{
+	left: 0%;
+	height: 40px;
+	width: 100%;
+	margin-left: 50px;
+    position: absolute;
+}
+
+
+
 /* Controls */
 
 #menuButtonWrapper{
@@ -34,7 +73,7 @@ body {
 	height: 30px;
 	width: 30px;
 	float: left;
-	position: fixed;
+	position: absolute;
 }
 
 .menuButtonIcon {
@@ -148,4 +187,22 @@ body {
 	font-weight: bold;
 	line-height: 90%;
 	margin-left: 30%;
+}
+
+#videoContainer{
+	padding-left:45px;
+	margin:auto;
+}
+
+.countingNumber{
+	color: #5AC4BE;
+	font-size: 100px;
+	font-family: Arial;
+	font-weight: bold;
+}
+
+#numberListContainer{
+	margin-top: -10%;
+	margin-left: auto;
+	margin-right: auto;
 }

@@ -22,10 +22,131 @@ Cruz, Beatriz Francesca
 		<link rel = "stylesheet" href = "css/alphabetStyle.css" />
 		<script src = "js/jquery-3.1.1.min.js"></script>
 		
+		<script>
+		
+			function randomImage(){
+				var indexNum = Math.floor((Math.random()*26))+1; //randomize number 1 - 26 for alphabets A - Z
+				
+				
+				switch(indexNum){
+					
+					default: 
+					case 1: //A
+						$("#imageSlideshowContainer").html(" <img class='mySlides' src='img/alphabetWords/a/ant.png'/> "); 
+						$("#alphabetActivityImageTitle").html(" <h1>Ant</h1> "); 
+						break;
+					case 2: //B
+						$("#imageSlideshowContainer").html(" <img class='mySlides' src='img/alphabetWords/b/ball.png'/> "); 
+						$("#alphabetActivityImageTitle").html(" <h1>Ball</h1> "); 
+						break;
+					case 3: //C
+						$("#imageSlideshowContainer").html(" <img class='mySlides' src='img/alphabetWords/c/car.png'/> "); 
+						$("#alphabetActivityImageTitle").html(" <h1>Car</h1> "); 
+						break;
+					case 4: //D
+						$("#imageSlideshowContainer").html(" <img class='mySlides' src='img/alphabetWords/d/dog.png'/> "); 
+						$("#alphabetActivityImageTitle").html(" <h1>Dog</h1> "); 
+						break;
+					case 5: //E
+						$("#imageSlideshowContainer").html(" <img class='mySlides' src='img/alphabetWords/e/eagle.png'/> "); 
+						$("#alphabetActivityImageTitle").html(" <h1>Eagle</h1> "); 
+						break;
+					case 6: //F
+						$("#imageSlideshowContainer").html(" <img class='mySlides' src='img/alphabetWords/f/fish.png'/> "); 
+						$("#alphabetActivityImageTitle").html(" <h1>Fish</h1> "); 
+						break;
+					case 7: //G
+						$("#imageSlideshowContainer").html(" <img class='mySlides' src='img/alphabetWords/g/grapes.png'/> "); 
+						$("#alphabetActivityImageTitle").html(" <h1>Grapes</h1> "); 
+						break;
+					case 8: //H
+						$("#imageSlideshowContainer").html(" <img class='mySlides' src='img/alphabetWords/h/hat.png'/> "); 
+						$("#alphabetActivityImageTitle").html(" <h1>Hat</h1> "); 
+						break;
+					case 9: //I
+						$("#imageSlideshowContainer").html(" <img class='mySlides' src='img/alphabetWords/i/ice.png'/> "); 
+						$("#alphabetActivityImageTitle").html(" <h1>Ice</h1> "); 
+						break;
+					case 10: //J
+						$("#imageSlideshowContainer").html(" <img class='mySlides' src='img/alphabetWords/j/juice.png'/> "); 
+						$("#alphabetActivityImageTitle").html(" <h1>Juice</h1> "); 
+						break;
+					case 11: //K
+						$("#imageSlideshowContainer").html(" <img class='mySlides' src='img/alphabetWords/k/key.png'/> "); 
+						$("#alphabetActivityImageTitle").html(" <h1>Key</h1> "); 
+						break;
+					case 12: //L
+						$("#imageSlideshowContainer").html(" <img class='mySlides' src='img/alphabetWords/l/leaf.png'/> "); 
+						$("#alphabetActivityImageTitle").html(" <h1>Leaf</h1> "); 
+						break;
+					case 13: //M
+						$("#imageSlideshowContainer").html(" <img class='mySlides' src='img/alphabetWords/m/moon.png'/> "); 
+						$("#alphabetActivityImageTitle").html(" <h1>Moon</h1> "); 
+						break;
+					case 14: //N
+						$("#imageSlideshowContainer").html(" <img class='mySlides' src='img/alphabetWords/n/noodles.png'/> "); 
+						$("#alphabetActivityImageTitle").html(" <h1>Noodles</h1> "); 
+						break;
+					case 15: //O
+						$("#imageSlideshowContainer").html(" <img class='mySlides' src='img/alphabetWords/o/orange.png'/> "); 
+						$("#alphabetActivityImageTitle").html(" <h1>Orange</h1> "); 
+						break;
+					case 16: //P
+						$("#imageSlideshowContainer").html(" <img class='mySlides' src='img/alphabetWords/p/pig.png'/> "); 
+						$("#alphabetActivityImageTitle").html(" <h1>Pig</h1> "); 
+						break;
+					case 17: //Q
+						$("#imageSlideshowContainer").html(" <img class='mySlides' src='img/alphabetWords/q/queen.png'/> "); 
+						$("#alphabetActivityImageTitle").html(" <h1>Queen</h1> "); 
+						break;
+					case 18: //R
+						$("#imageSlideshowContainer").html(" <img class='mySlides' src='img/alphabetWords/r/rainbow.png'/> "); 
+						$("#alphabetActivityImageTitle").html(" <h1>Rainbow</h1> "); 
+						break;
+					case 19: //S
+						$("#imageSlideshowContainer").html(" <img class='mySlides' src='img/alphabetWords/s/sun.png'/> "); 
+						$("#alphabetActivityImageTitle").html(" <h1>Shoe</h1> "); 
+						break;
+					case 20: //T
+						$("#imageSlideshowContainer").html(" <img class='mySlides' src='img/alphabetWords/t/tree.png'/> "); 
+						$("#alphabetActivityImageTitle").html(" <h1>Tree</h1> "); 
+						break;
+					case 21: //U
+						$("#imageSlideshowContainer").html(" <img class='mySlides' src='img/alphabetWords/u/utensils.png'/> "); 
+						$("#alphabetActivityImageTitle").html(" <h1>Utensils</h1> "); 
+						break;
+					case 22: //V
+						$("#imageSlideshowContainer").html(" <img class='mySlides' src='img/alphabetWords/v/van.png'/> "); 
+						$("#alphabetActivityImageTitle").html(" <h1>Van</h1> "); 
+						break;
+					case 23: //W
+						$("#imageSlideshowContainer").html(" <img class='mySlides' src='img/alphabetWords/w/watch.png'/> "); 
+						$("#alphabetActivityImageTitle").html(" <h1>Watch</h1> "); 
+						break;
+					case 24: //X
+						$("#imageSlideshowContainer").html(" <img class='mySlides' src='img/alphabetWords/x/xylophone.png'/> "); 
+						$("#alphabetActivityImageTitle").html(" <h1>Xylophone</h1> "); 
+						break;
+					case 25: //Y
+						$("#imageSlideshowContainer").html(" <img class='mySlides' src='img/alphabetWords/y/yoyo.png'/> "); 
+						$("#alphabetActivityImageTitle").html(" <h1>Yoyo</h1> "); 
+						break;
+					case 26: //Z
+						$("#imageSlideshowContainer").html(" <img class='mySlides' src='img/alphabetWords/z/zipper.png'/> "); 
+						$("#alphabetActivityImageTitle").html(" <h1>Zipper</h1> "); 
+						break;
+				}
+				
+				console.log(indexNum);
+				
+				
+			}
+		
+		</script>
+		
 	</head>
 	
 	<body>
-		
 		<div id="menuButtonWrapper">
 			<button class="menuButtonIcon"> <img src="img/controlIcons/menuBurger.png" /></button>
 			<div class="dropdown-content" id="dropdownList">
@@ -41,30 +162,22 @@ Cruz, Beatriz Francesca
 		
 		<div id= "controlBar">
 			<div id= "navigationControlsWrapper">
-				<button id = "coloringBtn" class = "navigationButton"><img src="img/controlIcons/rightArrow.png" /></button>
+				<button id = "coloringBtn" class = "effectButton" onclick="randomImage()"><img src="img/controlIcons/refresh.png" /></button>
 			</div>
 		</div>
 	
 		<div id = "activityImageSlideshowWrapper">
 			<div id = "imageSlideshowContainer">
-				<div class = "w3-content w3-display-container alphabetActivityImageSlideshow">
-					<img class="mySlides" src="img/alphabetWords/a/ant.png"/>
-					<img class="mySlides" src="img/alphabetWords/a/apple.png"/>
-					<img class="mySlides" src="img/alphabetWords/a/anchor.png"/>
 					
-					<button class="w3-button w3-display-left" onClick="plusDivs(-1)">&#10094;</button>
-					<button class="w3-button w3-display-right" onClick="plusDivs(+1)">&#10095;</button>			
-				</div>
-						
-				
 			</div>
 			<div id = "alphabetActivityImageTitle">
-				<h1>Hello</h1>
+				
 			</div>
 		</div>
 		
 	
 		
+		<script>randomImage();</script> <!--Auto generate a random image on page load-->
 	
 		<script>
 			$("#instruction").css("display","block");
@@ -97,25 +210,7 @@ Cruz, Beatriz Francesca
 				$("#instruction").css("display","none");
 			});
 			
-			//slideshow
 			
-			var slideIndex = 1;
-			showDivs(slideIndex);
-
-			function plusDivs(n) {
-				showDivs(slideIndex += n);
-			}
-
-			function showDivs(n) {
-				var i;
-				var x = document.getElementsByClassName("mySlides");
-				if (n > x.length) {slideIndex = 1} 
-				if (n < 1) {slideIndex = x.length} ;
-				for (i = 0; i < x.length; i++) {
-					x[i].style.display = "none"; 
-				}
-				x[slideIndex-1].style.display = "block"; 
-			}
 			
 		</script>
 	</body>
