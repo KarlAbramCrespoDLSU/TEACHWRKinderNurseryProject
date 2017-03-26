@@ -90,12 +90,62 @@ Cruz, Beatriz Francesca
 			</video>
 		</div>
 		
+		<div id="numberlist"> 
+			<table> 
+			<tr>
+				<td><img src="img/countingImgs/num01.jpg"/> </td>
+				<td><img src="img/countingImgs/num02.jpg"/> </td>
+				<td><img src="img/countingImgs/num03.jpg"/> </td>
+				<td><img src="img/countingImgs/num04.jpg"/> </td>
+				<td><img src="img/countingImgs/num05.jpg"/> </td>
+			</tr>
+			<tr>
+				<td><img src="img/countingImgs/num06.jpg"/> </td>
+				<td><img src="img/countingImgs/num07.jpg"/> </td>
+				<td><img src="img/countingImgs/num08.jpg"/> </td>
+				<td><img src="img/countingImgs/num09.jpg"/> </td>
+				<td><img src="img/countingImgs/num10.jpg"/> </td>
+			</tr>
+			<tr>
+				<td><img src="img/countingImgs/num11.jpg"/> </td>
+				<td><img src="img/countingImgs/num12.jpg"/> </td>
+				<td><img src="img/countingImgs/num13.jpg"/> </td>
+				<td><img src="img/countingImgs/num14.jpg"/> </td>
+				<td><img src="img/countingImgs/num15.jpg"/> </td>
+			</tr>
+			<tr>
+				<td><img src="img/countingImgs/num16.jpg"/> </td>
+				<td><img src="img/countingImgs/num17.jpg"/> </td>
+				<td><img src="img/countingImgs/num18.jpg"/> </td>
+				<td><img src="img/countingImgs/num19.jpg"/> </td>
+				<td><img src="img/countingImgs/num20.jpg"/> </td>
+			</tr>
+			</table>
+		</div>
+		
+		
 		<script>
+			$("#numberlist").hide();
 			$("#videoContainer").show();
 			
 			$("#toggleVideo").click(function(){
 				$("#videoContainer").toggle();
+				$("#numberlist").toggle();
 			});
+			
+			// Close the dropdown if the user clicks outside of it
+			window.onclick = function(event) {
+				if (!event.target.matches('#menuButtonWrapper')) {
+					var dropdowns = document.getElementsByClassName("dropdown-content");
+					var i;
+					for (i = 0; i < dropdowns.length; i++) {
+						var openDropdown = dropdowns[i];
+							if (openDropdown.classList.contains('show')) {
+								openDropdown.classList.remove('show');
+							}
+					}
+				}
+			}
 		</script>
 	</body>
 	
