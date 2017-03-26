@@ -25,31 +25,25 @@ Cruz, Beatriz Francesca
 	</head>
 	
 	<body>
-		<div id = "titleSection">
-				<text id = "titleTag">Tracing Activity!</text>
-				</div>
+		<div id="menuButtonWrapper">
+			<button class="menuButtonIcon"> <img src="img/controlIcons/menuBurger.png" /></button>
+			<div class="dropdown-content" id="dropdownList">
+			  <a href="index.html">Home</a>
+			  <a href="alphabetmenu.html">Menu</a>
+			  <a href="phonemeact1.html">Phoneme Activities</a>
+			</div>
+		</div> 
 		
-		<div id="instruction">
-			<text> Trace the letters.</text>
+		<div id = "menuTitleWrapper">
+			<h5 class = "titleText">Activity: Trace the letters</h5>
 		</div>
-	
-		<div id= "tracingPage">
-			<div id="gifButtons">
-				<button id ="toggle1" class="effectButton"></button>
-				<button id ="toggle2" class="effectButton"></button>
-				<button id ="toggle3" class="effectButton"></button>
-				<button id ="toggle4" class="effectButton"></button>
-			</div>
-			
-			<div id="tracingGifs">
-				<img id="img1" src="img\animatedLetterGIFs\A\A.gif" class "writinggif"/>
-				<img id="img2" src="img\animatedLetterGIFs\A\small a.gif" class "writinggif"/>
-				<img id="img3" src="img\animatedLetterGIFs\A\A no guideline.gif" class "writinggif"/>
-				<img id="img4" src="img\animatedLetterGIFs\A\small a no guideline.gif" class "writinggif"/>
-			</div>
-			
-			<div id="letterRandom">
-				<select>
+		
+		<div id="controlBar">
+		
+			<!--
+				Jquery to change html 
+			-->
+			<div id="navigationControlsWrapper"><select>
 					<option value="a">A</option>
 					<option value="b">B</option>
 					<option value="c">C</option>
@@ -78,22 +72,29 @@ Cruz, Beatriz Francesca
 					<option value="z">Z</option>
 				</select>
 			</div>
+			<div id="effectControlsWrapper">
+				<button id ="toggle1" class="effectButton"><img src="img/controlIcons/guidelineLetter.png" /></button>
+				<button id ="toggle2" class="effectButton"><img src="img/controlIcons/guidelineSmallLetter.png" /></button>
+				<button id ="toggle3" class="effectButton"><img src="img/controlIcons/solidLetter.png" /></button>
+				<button id ="toggle4" class="effectButton"><img src="img/controlIcons/solidSmallLetter.png" /></button>
+			</div>
+				
 		</div>
 	
-		<div id="menuButtonWrapper">
-			<button class="menuButtonIcon"> <img src="img/controlIcons/menuBurger.png" /></button>
-			<div class="dropdown-content" id="dropdownList">
-			  <a href="index.html">Home</a>
-			  <a href="alphabetmenu.html">Menu</a>
-			  <a href="phonemeact1.html">Phoneme Activities</a>
-			</div>
-		</div> 
 		
-		<div id="controlBar">
-			<div id="navigationControlsWrapper">
-				<button id = "tracingBtn" class = "navigationButton"><img src="img/controlIcons/rightArrow.png" /></button>
+			
+			
+			<div id="tracingGifs">
+				<img id="img1" src="img\animatedLetterGIFs\A\A.gif" class "writinggif"/>
+				<img id="img2" src="img\animatedLetterGIFs\A\small a.gif" class "writinggif"/>
+				<img id="img3" src="img\animatedLetterGIFs\A\A no guideline.gif" class "writinggif"/>
+				<img id="img4" src="img\animatedLetterGIFs\A\small a no guideline.gif" class "writinggif"/>
+				
 			</div>
-		</div>
+			
+			
+	
+		
 	
 		<script>
 			$("#instruction").css("display","block");
