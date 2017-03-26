@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<!-- 
+
+TEACHWR S21 AY 2016-2017 TERM 2
+
+Chingcuangco, Rene Jeric
+Crespo, Karl Crespo
+Cruz, Beatriz Francesca
+
+
+ -->
+
+<html>
+	<head>
+		<title>Phonemes and Counting</title> 
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/w3.css" />
+		<link rel = "stylesheet" href = "css/style.css" />
+		<link rel = "stylesheet" href = "css/alphabetStyle.css" />
+		<script src = "js/jquery-3.1.1.min.js"></script>
+		
+	</head>
+	
+	<body>
+		<div id="menuButtonWrapper">
+			<button class="menuButtonIcon"> <img src="img/controlIcons/menuBurger.png" /></button>
+			<div class="dropdown-content" id="dropdownList">
+			  <a href="index.html">Home</a>
+			  <a href="alphabetmenu.html">Menu</a>
+			</div>
+		</div> 
+		
+		<div id="activitytitle">
+			<h1 id = "activitytext">Counting Time!</h1>
+				<img src="img/others/sun.png" id="sunimg"/>
+		</div>
+	
+		<div id="controlBar">
+			<div id="activitybtns">
+				<a href="countingact2.html"><button id="counting10" class="effectButton"><img src="img/controlIcons/pencil.png"/></button></a>
+				<a href="countingact3.html"><button id="counting20" class="effectButton"><img src="img/controlIcons/pencil.png"/></button></a>
+			</div>
+		</div>
+	
+		<script>
+			$(".menuButtonIcon").click(function menuDropdown(){
+				if($("#dropdownList").css("display") == "none"){
+						$("#dropdownList").css("display","block");
+					}
+					else {
+						$("#dropdownList").css("display","none");
+					}
+			});		
+			
+			// Close the dropdown if the user clicks outside of it
+			window.onclick = function(event) {
+				if (!event.target.matches('#menuButtonWrapper')) {
+					var dropdowns = document.getElementsByClassName("dropdown-content");
+					var i;
+					for (i = 0; i < dropdowns.length; i++) {
+						var openDropdown = dropdowns[i];
+							if (openDropdown.classList.contains('show')) {
+								openDropdown.classList.remove('show');
+							}
+					}
+				}
+			}
+			
+		</script>
+	</body>
+</html>

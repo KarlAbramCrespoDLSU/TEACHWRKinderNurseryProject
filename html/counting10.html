@@ -74,27 +74,53 @@ Cruz, Beatriz Francesca
 		
 		<div id = "controlBar">
 			<div id = "effectControlsWrapper">
-				<button id = "toggleVideo" class = "effectButton" ><img src="img/controlIcons/video.png" />
+				<button id = "toggleImgCounter" class = "effectButton" ><img src="img/controlIcons/pictures.png" /></a>
+				<button id = "toggleDigitCounter" class = "effectButton" ><img src="img/controlIcons/case.png" /></a>
 			</div>
 			<div id = "navigationControlsWrapper">
-				<a href = "countingact1.html" class = "navigationButton" ><img src="img/controlIcons/activity.png" /> </a>
 				<button class = "navigationButton" onClick = "decrementNumber()"><img src="img/controlIcons/leftArrow.png" /></a>
 				<button class = "navigationButton" onClick = "incrementNumber()"><img src="img/controlIcons/rightArrow.png" /></a>
 			</div>
 			
 		</div>
 		
-		<div id="videoContainer">
-			<video width="95%" height="570" controls>
-				<source src="vid/placeholdervid.mp4" type="video/mp4">
-			</video>
-		</div>
 		
-		<script>
-			$("#videoContainer").show();
+		<div id = "contentWrapper">
+			<!-- Insert Code here -->
+			<div id = "countingImgContainer">
+			<table> 
+			<tr>
+				<td><img src="img/countingImgs/num01.jpg"/> </td>
+				<td><img src="img/countingImgs/num02.jpg"/> </td>
+				<td><img src="img/countingImgs/num03.jpg"/> </td>
+				<td><img src="img/countingImgs/num04.jpg"/> </td>
+			</tr>
+			<tr>
+				<td><img src="img/countingImgs/num05.jpg"/> </td>
+				<td><img src="img/countingImgs/num06.jpg"/> </td>
+				<td><img src="img/countingImgs/num07.jpg"/> </td>
+			</tr>
+			<tr>
+				<td><img src="img/countingImgs/num08.jpg"/> </td>
+				<td><img src="img/countingImgs/num09.jpg"/> </td>
+				<td><img src="img/countingImgs/num10.jpg"/> </td>
+			</tr>
+			</table>
+			</div>
 			
-			$("#toggleVideo").click(function(){
-				$("#videoContainer").toggle();
+			<div id = "numbercontainer">
+				<span id = "bigNumber">Counting Time!</span>
+			</div>
+			
+		</div>
+		<script>
+			$("#numbercontainer").hide();
+			
+			$("#toggleDigitCounter").click(function(){
+				$("#numbercontainer").toggle();
+			});
+			$("#toggleImgCounter").click(function(){
+				$("#countingImgContainer").toggle();
 			});
 		</script>
 	</body>

@@ -75,9 +75,10 @@ Cruz, Beatriz Francesca
 		<div id = "controlBar">
 			<div id = "effectControlsWrapper">
 				<button id = "toggleVideo" class = "effectButton" ><img src="img/controlIcons/video.png" />
+				<button id = "toggleImgCounter" class = "effectButton" ><img src="img/controlIcons/pictures.png" /></a>
+				<button id = "toggleDigitCounter" class = "effectButton" ><img src="img/controlIcons/case.png" /></a>
 			</div>
 			<div id = "navigationControlsWrapper">
-				<a href = "countingact1.html" class = "navigationButton" ><img src="img/controlIcons/activity.png" /> </a>
 				<button class = "navigationButton" onClick = "decrementNumber()"><img src="img/controlIcons/leftArrow.png" /></a>
 				<button class = "navigationButton" onClick = "incrementNumber()"><img src="img/controlIcons/rightArrow.png" /></a>
 			</div>
@@ -90,9 +91,27 @@ Cruz, Beatriz Francesca
 			</video>
 		</div>
 		
+		<div id = "contentWrapper">
+			<!-- Insert Code here -->
+			<div id = "countingImgContainer">
+					<img class="myBlocks" src="img/countingImgs/redblocks.jpg"/>
+			</div>
+			
+			<div id = "numbercontainer">
+				<span id = "bigNumber">Counting Time!</span>
+			</div>
+			
+		</div>
 		<script>
+			$("#numbercontainer").hide();
 			$("#videoContainer").show();
 			
+			$("#toggleDigitCounter").click(function(){
+				$("#numbercontainer").toggle();
+			});
+			$("#toggleImgCounter").click(function(){
+				$("#countingImgContainer").toggle();
+			});
 			$("#toggleVideo").click(function(){
 				$("#videoContainer").toggle();
 			});
