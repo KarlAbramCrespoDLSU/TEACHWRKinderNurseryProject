@@ -67,18 +67,21 @@ body {
 
 /* Controls */
 
-#menuButtonWrapper{
 
+#menuButtonWrapper{
 	left: 0%;
 	height: 30px;
 	width: 30px;
-	float: left;
-	position: absolute;
+    float: left;
+    position: fixed;
+    display: inline-block;
 }
 
+/*button*/
 .menuButtonIcon {
-	height: 40px;
-	width: 40px;
+	cursor: pointer;
+	height: 35px;
+	width: 35px;
 	margin: 2%;
 	background-color: #DDDDDD;
 	float: left;
@@ -89,13 +92,38 @@ body {
 .menuButtonIcon img {
 	max-width: 20px;
 	max-height: 20px;
-	margin: 10px;
+	margin-top: 10%;
+	margin-right: 10%;
 }
 
 .menuButtonIcon:hover {
 	background-color: #CCCCCC;
 	transition: all 0.5s ease;
 }
+
+#dropdownList {
+	margin-top: 35px;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+	left: 0;
+	overflow: auto;
+}
+
+.dropdown-content a {
+    display: block;
+}
+
+.show { display: block;}
+
 
 #controlBar {
 	width: 100%;
@@ -107,12 +135,12 @@ body {
 
 #effectControlsWrapper{
 
-	width: 200px;
+	width: 250px;
 	height: 100%;
 	float: left;
 }
 
-.effectButton {
+.effectButton  {
 	height: 40px;
 	width: 40px;
 	margin: 2%;
@@ -123,8 +151,8 @@ body {
 }
 
 .effectButton img {
-	max-width: 20px;
-	max-height: 20px;
+	max-width: 24px;
+	max-height: 24px;
 }
 
 .effectButton:hover {
@@ -143,9 +171,9 @@ body {
 }
 
 .navigationButton img {
-	max-width: 10px;
-	max-height: 10px;
-	margin: 5px;
+	max-width: 16px;
+	max-height: 16px;
+	margin: 12px;
 }
 
 .navigationButton:hover {
@@ -155,10 +183,11 @@ body {
 
 
 #navigationControlsWrapper{
-	width: 120px;
+	width: 200px;
 	height: 100%;
 	float: right;
 }
+
 
 /* Controls END */
 
@@ -182,7 +211,7 @@ body {
 
 #bigNumber{
 	color: #5AC4BE;
-	font-size: 30vw;
+	font-size: 15vw;
 	font-family: Arial;
 	font-weight: bold;
 	line-height: 90%;
@@ -199,6 +228,7 @@ body {
 	font-size: 100px;
 	font-family: Arial;
 	font-weight: bold;
+	text-align: center;
 }
 
 #numberListContainer{

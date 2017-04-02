@@ -64,13 +64,14 @@ Cruz, Beatriz Francesca
 	</head>
 	<body>
 		
-		<div id="menuButtonWrapper">
-			<button class="menuButtonIcon"> <img src="img/controlIcons/menuBurger.png" /></button>
+		<div id = "menuButtonWrapper">
+			<button class="menuButtonIcon" onclick="menuDropdown()"> <img src="img/controlIcons/menuBurger.png" /></button>
 			<div class="dropdown-content" id="dropdownList">
 			  <a href="index.html">Home</a>
-			  <a href="alphabetmenu.html">Menu</a>
+			  <a href="counting.html">Counting</a>
+			  <a href="countingact1.html">Activities</a>
 			</div>
-		</div> 
+		</div>
 		
 		<div id="activitytitle">
 			<h1 id = "activitytext">Activity Time!</h1>
@@ -108,6 +109,28 @@ Cruz, Beatriz Francesca
 				}
 			}
 			
+			$(".menuButtonIcon").click(function menuDropdown(){
+				if($("#dropdownList").css("display") == "none"){
+						$("#dropdownList").css("display","block");
+					}
+					else {
+						$("#dropdownList").css("display","none");
+					}
+			});		
+			
+			// Close the dropdown if the user clicks outside of it
+			window.onclick = function(event) {
+				if (!event.target.matches('#menuButtonWrapper')) {
+					var dropdowns = document.getElementsByClassName("dropdown-content");
+					var i;
+					for (i = 0; i < dropdowns.length; i++) {
+						var openDropdown = dropdowns[i];
+							if (openDropdown.classList.contains('show')) {
+								openDropdown.classList.remove('show');
+							}
+					}
+				}
+			}
 		</script>
 	</body>
 	</body>

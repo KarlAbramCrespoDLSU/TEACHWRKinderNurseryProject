@@ -21,7 +21,6 @@ Cruz, Beatriz Francesca
 		<link rel = "stylesheet" href = "css/style.css" />
 		<link rel = "stylesheet" href = "css/alphabetStyle.css"/>
 		<script src = "js/jquery-3.1.1.min.js"></script>
-		
 	</head>
 	
 	<body>
@@ -44,42 +43,7 @@ Cruz, Beatriz Francesca
 				Jquery to change html 
 			-->
 			<div id="navigationControlsWrapper">
-				<button id = "coloringBtn" class = "effectButton" onclick="displayNewLetter()"><img src="img/controlIcons/refresh.png" /></button>
-				<select id = "selectLetter">
-					<option value="a">A</option>
-					<option value="b">B</option>
-					<option value="c">C</option>
-					<option value="d">D</option>
-					<option value="e">E</option>
-					<option value="f">F</option>
-					<option value="g">G</option>
-					<option value="h">H</option>
-					<option value="i">I</option>
-					<option value="j">J</option>
-					<option value="k">K</option>
-					<option value="l">L</option>
-					<option value="m">M</option>
-					<option value="n">N</option>
-					<option value="o">O</option>
-					<option value="p">P</option>
-					<option value="q">Q</option>
-					<option value="r">R</option>
-					<option value="s">S</option>
-					<option value="t">T</option>
-					<option value="u">U</option>
-					<option value="v">V</option>
-					<option value="w">W</option>
-					<option value="x">X</option>
-					<option value="y">Y</option>
-					<option value="z">Z</option>
-				</select>
 				
-			</div>
-			<div id="effectControlsWrapper">
-				<button id ="toggle1" class="effectButton"><img src="img/controlIcons/guidelineLetter.png" /></button>
-				<button id ="toggle2" class="effectButton"><img src="img/controlIcons/guidelineSmallLetter.png" /></button>
-				<button id ="toggle3" class="effectButton"><img src="img/controlIcons/solidLetter.png" /></button>
-				<button id ="toggle4" class="effectButton"><img src="img/controlIcons/solidSmallLetter.png" /></button>
 			</div>
 				
 		</div>
@@ -88,17 +52,50 @@ Cruz, Beatriz Francesca
 			
 		<div id = "contentWrapper">
 			<!-- Insert Code here -->
-			<img src = "img/sampleScreens/wordActSample.png" />
-			
+			<img src = "img/alphabetActivity/A/a1.png" />
 		</div>	
 	
 	
 	
 		<script>
-			initializeDrawingLetterPage();
-			displayNewLetter();
 			
+			switch(localStorage.currentLetter){
+					
+					default: //do nothing
+						break;
+					case 'a': //A
+						$("#contentWrapper").html(" <img class='mySlides' src='img/alphabetActivity/A/a1.png'/> "); 
+						break;
+					case 'e': //E
+						$("#contentWrapper").html(" <img class='mySlides' src='img/alphabetActivity/E/e1.png'/> "); 
+						break;
+					case 'i': //I
+						$("#contentWrapper").html(" <img class='mySlides' src='img/alphabetActivity/I/i1.png'/> "); 
+						break;
+					case 'o': //O
+						$("#contentWrapper").html(" <img class='mySlides' src='img/alphabetActivity/O/o1.png'/> "); 
+						break;
+					case 'u': //U
+						$("#contentWrapper").html(" <img class='mySlides' src='img/alphabetActivity/U/u1.png'/> "); 
+						break;
+				}
+				
+				console.log(localStorage.currentLetter);
 			
+			function plusDivs(n) {
+				showDivs(slideIndex += n);
+			}
+
+			function showDivs(n) {
+				var i;
+				var x = document.getElementsByClassName("mySlides");
+				if (n > x.length) {slideIndex = 1} 
+				if (n < 1) {slideIndex = x.length} ;
+				for (i = 0; i < x.length; i++) {
+					x[i].style.display = "none"; 
+				}
+				x[slideIndex-1].style.display = "block"; 
+			}
 		
 			$("#instruction").css("display","block");
 			$("#tracingPage").css("display","none");
@@ -129,39 +126,6 @@ Cruz, Beatriz Francesca
 					}
 				}
 			}
-			
-			$("#tracingBtn").click(function(){
-				$("#tracingPage").css("display","block");
-				$("#instruction").css("display","none");
-			});
-			
-			$("#toggle1").click(function(){
-					$(".img1").css("display","block");
-					$(".img2").css("display","none");
-					$(".img3").css("display","none");
-					$(".img4").css("display","none");
-			});
-			
-			$("#toggle2").click(function(){
-					$(".img2").css("display","block");
-					$(".img1").css("display","none");
-					$(".img3").css("display","none");
-					$(".img4").css("display","none");
-			});
-			
-			$("#toggle3").click(function(){
-					$(".img3").css("display","block");
-					$(".img2").css("display","none");
-					$(".img1").css("display","none");
-					$(".img4").css("display","none");
-			});
-			
-			$("#toggle4").click(function(){
-					$(".img4").css("display","block");
-					$(".img2").css("display","none");
-					$(".img3").css("display","none");
-					$(".img1").css("display","none");
-			});
 		</script>
 	</body>
 </html>

@@ -36,7 +36,7 @@ Cruz, Beatriz Francesca
 				console.log(number);
 				
 				for (var i = 0; i < number; i++){
-					$("#countingImgContainer").append("<img src = 'img/countingImgs/popsicle.png'> ");
+					$("#countingImgContainer").append("<img src = 'img/countingImgs/redblock.png'> ");
 					console.log("Test");
 				}
 			}
@@ -49,7 +49,7 @@ Cruz, Beatriz Francesca
 					$("#countingImgContainer").html(""); // reset popsicles to 0
 					
 					for (var i = 0; i < number; i++){
-					$("#countingImgContainer").append("<img src = 'img/countingImgs/popsicle.png'> ");
+					$("#countingImgContainer").append("<img src = 'img/countingImgs/redblock.png'> ");
 					console.log("Test");
 				}
 				}
@@ -65,7 +65,12 @@ Cruz, Beatriz Francesca
 	<body>
 		
 		<div id = "menuButtonWrapper">
-			<a href = "index.html" class = "menuButtonIcon" ><img src="img/controlIcons/menuBurger.png" /></a>
+			<button class="menuButtonIcon" onclick="menuDropdown()"> <img src="img/controlIcons/menuBurger.png" /></button>
+			<div class="dropdown-content" id="dropdownList">
+			  <a href="index.html">Home</a>
+			  <a href="counting.html">Counting</a>
+			  <a href="countingact1.html">Activities</a>
+			</div>
 		</div>
 	
 		<div id = "menuTitleWrapper">
@@ -74,21 +79,14 @@ Cruz, Beatriz Francesca
 		
 		<div id = "controlBar">
 			<div id = "effectControlsWrapper">
-				<button id = "toggleVideo" class = "effectButton" ><img src="img/controlIcons/video.png" />
 				<button id = "toggleImgCounter" class = "effectButton" ><img src="img/controlIcons/pictures.png" /></a>
 				<button id = "toggleDigitCounter" class = "effectButton" ><img src="img/controlIcons/case.png" /></a>
 			</div>
 			<div id = "navigationControlsWrapper">
-				<button class = "navigationButton" onClick = "decrementNumber()"><img src="img/controlIcons/leftArrow.png" /></a>
-				<button class = "navigationButton" onClick = "incrementNumber()"><img src="img/controlIcons/rightArrow.png" /></a>
+				<button class = "effectButton" onClick = "decrementNumber()"><img src="img/controlIcons/leftArrow.png" /></a>
+				<button class = "effectButton" onClick = "incrementNumber()"><img src="img/controlIcons/rightArrow.png" /></a>
 			</div>
 			
-		</div>
-		
-		<div id="videoContainer">
-			<video width="1280" height="570" controls>
-				<source src="vid/placeholdervid.mp4" type="video/mp4">
-			</video>
 		</div>
 		
 		<div id = "contentWrapper">
@@ -115,6 +113,29 @@ Cruz, Beatriz Francesca
 			$("#toggleVideo").click(function(){
 				$("#videoContainer").toggle();
 			});
+			
+			$(".menuButtonIcon").click(function menuDropdown(){
+				if($("#dropdownList").css("display") == "none"){
+						$("#dropdownList").css("display","block");
+					}
+					else {
+						$("#dropdownList").css("display","none");
+					}
+			});		
+			
+			// Close the dropdown if the user clicks outside of it
+			window.onclick = function(event) {
+				if (!event.target.matches('#menuButtonWrapper')) {
+					var dropdowns = document.getElementsByClassName("dropdown-content");
+					var i;
+					for (i = 0; i < dropdowns.length; i++) {
+						var openDropdown = dropdowns[i];
+							if (openDropdown.classList.contains('show')) {
+								openDropdown.classList.remove('show');
+							}
+					}
+				}
+			}
 		</script>
 	</body>
 	

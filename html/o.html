@@ -23,7 +23,10 @@ Cruz, Beatriz Francesca
 	</head>
 	
 	<body>
-	
+		<script>
+			localStorage.currentLetter = "o";
+			console.log("Current letter: " + localStorage.currentLetter);
+		</script>
 		<div id="menuButtonWrapper">
 			<button class="menuButtonIcon" > <img src="img/controlIcons/menuBurger.png" /></button>
 			
@@ -56,7 +59,7 @@ Cruz, Beatriz Francesca
 
 		<div id="videoContainer">
 			<video id="vid" width="1280" height="570" controls>
-				<source src="vid/O.mp4" type="video/mp4">
+				<source src="vid/alphabet/O.mp4" type="video/mp4">
 			</video>
 		</div>
 		
@@ -70,8 +73,10 @@ Cruz, Beatriz Francesca
 			<div id = "imageSlideshowContainer">
 				<div class = "w3-content w3-display-container imageSlideshow">
 					<img class="mySlides" src="img/alphabetWords/o/octopus.png"/>
-					<img class="mySlides" src="img/alphabetWords/o/orange.png"/>
 					<img class="mySlides" src="img/alphabetWords/o/onion.png"/>
+					<img class="mySlides" src="img/alphabetWords/o/orange.png"/>
+					<img class="mySlides" src="img/alphabetWords/o/ostrich.png"/>
+					<img class="mySlides" src="img/alphabetWords/o/owl.png"/>
 					
 					<button class="w3-button w3-display-left" onClick="plusDivs(-1)">&#10094;</button>
 					<button class="w3-button w3-display-right" onClick="plusDivs(+1)">&#10095;</button>			

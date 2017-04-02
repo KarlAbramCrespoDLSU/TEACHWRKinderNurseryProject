@@ -15,7 +15,6 @@ Cruz, Beatriz Francesca
 	<head>
 		<title>TEACHWR</title> <!--Give a good name please-->
 		<meta charset="UTF-8">
-		<link rel = "stylesheet" href = "css/countingStyle.css" />
 		<script src = "js/jquery-3.1.1.min.js"></script>
 		<link rel="stylesheet" href="css/w3.css" />
 		<link rel = "stylesheet" href = "css/countingStyle.css" />
@@ -25,7 +24,12 @@ Cruz, Beatriz Francesca
 	<body>
 		
 		<div id = "menuButtonWrapper">
-			<a href = "index.html" class = "menuButtonIcon" ><img src="img/controlIcons/menuBurger.png" /></a>
+			<button class="menuButtonIcon" onclick="menuDropdown()"> <img src="img/controlIcons/menuBurger.png" /></button>
+			<div class="dropdown-content" id="dropdownList">
+			  <a href="index.html">Home</a>
+			  <a href="counting.html">Counting</a>
+			  <a href="countingact1.html">Activities</a>
+			</div>
 		</div>
 	
 		<div id = "menuTitleWrapper">
@@ -46,12 +50,12 @@ Cruz, Beatriz Francesca
 		
 		<div id="videoContainer">
 			<video width="1280" height="570" controls>
-				<source src="vid/placeholdervid.mp4" type="video/mp4">
+				<source src="vid/counting/Intro.mp4" type="video/mp4">
 			</video>
 		</div>
 		<div id = "contentWrapper">
 			<div id = "numberListContainer">
-				<p class = "countingNumber">1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20</p>
+				<p class = "countingNumber">1 2 3 4 5 6 7 8 9 10</p>
 			</div>
 		</div>
 		<script>
@@ -70,6 +74,29 @@ Cruz, Beatriz Francesca
 				$("#numberListContainer").html(" <p class = 'countingNumber'>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20</p>"); 
 			}
 		
+		
+			$(".menuButtonIcon").click(function menuDropdown(){
+				if($("#dropdownList").css("display") == "none"){
+						$("#dropdownList").css("display","block");
+					}
+					else {
+						$("#dropdownList").css("display","none");
+					}
+			});		
+			
+			// Close the dropdown if the user clicks outside of it
+			window.onclick = function(event) {
+				if (!event.target.matches('#menuButtonWrapper')) {
+					var dropdowns = document.getElementsByClassName("dropdown-content");
+					var i;
+					for (i = 0; i < dropdowns.length; i++) {
+						var openDropdown = dropdowns[i];
+							if (openDropdown.classList.contains('show')) {
+								openDropdown.classList.remove('show');
+							}
+					}
+				}
+			}
 		</script>
 	</body>
 	

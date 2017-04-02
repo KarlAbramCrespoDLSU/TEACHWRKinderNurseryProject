@@ -53,6 +53,9 @@ td{
 	font-weight: Bold;
 	font-size: 50px;
 	color: #ffffff;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 250%;
 	
 	float: left;
 	
@@ -76,6 +79,10 @@ td{
 	font-weight: Bold;
 	font-size: 50px;
 	color: #ffffff;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 250%;
+	
 	
 	float: right;
 	

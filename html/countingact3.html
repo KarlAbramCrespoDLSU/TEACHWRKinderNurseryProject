@@ -25,7 +25,12 @@ Cruz, Beatriz Francesca
 	<body>
 		
 		<div id = "menuButtonWrapper">
-			<a href = "index.html" class = "menuButtonIcon" ><img src="img/controlIcons/menuBurger.png" /></a>
+			<button class="menuButtonIcon" onclick="menuDropdown()"> <img src="img/controlIcons/menuBurger.png" /></button>
+			<div class="dropdown-content" id="dropdownList">
+			  <a href="index.html">Home</a>
+			  <a href="counting.html">Counting</a>
+			  <a href="countingact1.html">Activities</a>
+			</div>
 		</div>
 	
 		<div id = "menuTitleWrapper">
@@ -34,13 +39,10 @@ Cruz, Beatriz Francesca
 		
 		<div id = "controlBar">
 			<div id = "effectControlsWrapper">
-				<button id = "toggleVideo" class = "effectButton" ><img src="img/controlIcons/video.png" />
-				<button id = "toggleImgCounter" class = "effectButton" ><img src="img/controlIcons/pictures.png" /></a>
-				<button id = "toggleDigitCounter" class = "effectButton" ><img src="img/controlIcons/case.png" /></a>
 			</div>
 			<div id = "navigationControlsWrapper">
-				<button class = "navigationButton" onClick = "decrementNumber()"><img src="img/controlIcons/leftArrow.png" /></a>
-				<button class = "navigationButton" onClick = "incrementNumber()"><img src="img/controlIcons/rightArrow.png" /></a>
+				<button class = "effectButton" onClick = "decrementNumber()"><img src="img/controlIcons/leftArrow.png" /></a>
+				<button class = "effectButton" onClick = "incrementNumber()"><img src="img/controlIcons/rightArrow.png" /></a>
 			</div>
 			
 		</div>
@@ -48,7 +50,6 @@ Cruz, Beatriz Francesca
 		
 		<div id = "contentWrapper">
 			<!-- Insert Code here -->
-			<img src = "img/sampleScreens/countingActSample.png" />
 			
 		</div>
 		<script>
@@ -64,6 +65,85 @@ Cruz, Beatriz Francesca
 			$("#toggleVideo").click(function(){
 				$("#videoContainer").toggle();
 			});
+			
+			$(".menuButtonIcon").click(function menuDropdown(){
+				if($("#dropdownList").css("display") == "none"){
+						$("#dropdownList").css("display","block");
+					}
+					else {
+						$("#dropdownList").css("display","none");
+					}
+			});		
+			
+			// Close the dropdown if the user clicks outside of it
+			window.onclick = function(event) {
+				if (!event.target.matches('#menuButtonWrapper')) {
+					var dropdowns = document.getElementsByClassName("dropdown-content");
+					var i;
+					for (i = 0; i < dropdowns.length; i++) {
+						var openDropdown = dropdowns[i];
+							if (openDropdown.classList.contains('show')) {
+								openDropdown.classList.remove('show');
+							}
+					}
+				}
+			}
+			
+			
+			
+			var number;
+			
+			number = 1	// get value from span bigNumber
+			
+			changeCountingActivity();
+			
+			function incrementNumber(){
+				number++;
+				console.log(number);
+				changeCountingActivity();
+			}
+			
+			function decrementNumber(){
+				number--;
+				changeCountingActivity();
+			}
+			
+			function changeCountingActivity(){
+			
+				switch(number){
+					default:
+					case 1:	
+						$("#contentWrapper").html(" <img class='mySlides' src='img/countingActivity/1/1a.png'/> "); 
+						break;
+					case 2:	
+						$("#contentWrapper").html(" <img class='mySlides' src='img/countingActivity/2/2a.png'/> "); 
+						break;
+					case 3:	
+						$("#contentWrapper").html(" <img class='mySlides' src='img/countingActivity/3/3a.png'/> "); 
+						break;
+					case 4:	
+						$("#contentWrapper").html(" <img class='mySlides' src='img/countingActivity/4/4a.png'/> "); 
+						break;
+					case 5:	
+						$("#contentWrapper").html(" <img class='mySlides' src='img/countingActivity/5/5a.png'/> "); 
+						break;
+					case 6:	
+						$("#contentWrapper").html(" <img class='mySlides' src='img/countingActivity/6/6a.png'/> "); 
+						break;
+					case 7:	
+						$("#contentWrapper").html(" <img class='mySlides' src='img/countingActivity/7/7a.png'/> "); 
+						break;
+					case 8:	
+						$("#contentWrapper").html(" <img class='mySlides' src='img/countingActivity/8/8a.png'/> "); 
+						break;
+					case 9:	
+						$("#contentWrapper").html(" <img class='mySlides' src='img/countingActivity/9/9a.png'/> "); 
+						break;
+					case 10:	
+						$("#contentWrapper").html(" <img class='mySlides' src='img/countingActivity/10/10a.png'/> "); 
+						break;
+				}
+			}
 		</script>
 	</body>
 	

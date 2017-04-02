@@ -24,6 +24,8 @@ Cruz, Beatriz Francesca
 		
 		<script>
 		
+		
+		
 		function displayNewLetter() {
 			var selectedLetter = document.getElementById("selectLetter");
 			var strUser = selectedLetter.options[selectedLetter.selectedIndex].value;
@@ -31,6 +33,8 @@ Cruz, Beatriz Francesca
 			
 			switch(strUser){
 				default:
+				
+				console.log("Button is working!");
 				case 'a':
 					$("#tracingGifsA").show();
 					$("#tracingGifsB").hide();
@@ -175,7 +179,12 @@ Cruz, Beatriz Francesca
 					$("#tracingGifsM").show();
 					break;
 			}
+		
+			
 		}
+		
+		
+		
 		
 		function initializeDrawingLetterPage(){
 			$("#tracingGifsA").show();
@@ -399,6 +408,154 @@ Cruz, Beatriz Francesca
 					$(".img3").css("display","none");
 					$(".img1").css("display","none");
 			});
+			
+			// on page load
+		switch(localStorage.currentLetter){
+				default:
+				case 'a':
+					$("#tracingGifsA").show();
+					$("#tracingGifsB").hide();
+					$("#tracingGifsC").hide();
+					$("#tracingGifsD").hide();
+					$("#tracingGifsE").hide();
+					$("#tracingGifsI").hide();
+					$("#tracingGifsO").hide();
+					$("#tracingGifsU").hide();
+					$("#tracingGifsK").hide();
+					$("#tracingGifsL").hide();
+					$("#tracingGifsM").hide();
+					break;
+				case 'b':
+					$("#tracingGifsA").hide();
+					$("#tracingGifsB").show();
+					$("#tracingGifsC").hide();
+					$("#tracingGifsD").hide();
+					$("#tracingGifsE").hide();
+					$("#tracingGifsI").hide();
+					$("#tracingGifsO").hide();
+					$("#tracingGifsU").hide();
+					$("#tracingGifsK").hide();
+					$("#tracingGifsL").hide();
+					$("#tracingGifsM").hide();
+					break;
+				case 'c':
+					$("#tracingGifsA").hide();
+					$("#tracingGifsB").hide();
+					$("#tracingGifsC").show();
+					$("#tracingGifsD").hide();
+					$("#tracingGifsE").hide();
+					$("#tracingGifsI").hide();
+					$("#tracingGifsO").hide();
+					$("#tracingGifsU").hide();
+					$("#tracingGifsK").hide();
+					$("#tracingGifsL").hide();
+					$("#tracingGifsM").hide();
+					break;
+				case 'd':
+					$("#tracingGifsA").hide();
+					$("#tracingGifsB").hide();
+					$("#tracingGifsC").hide();
+					$("#tracingGifsD").show();
+					$("#tracingGifsE").hide();
+					$("#tracingGifsI").hide();
+					$("#tracingGifsO").hide();
+					$("#tracingGifsU").hide();
+					$("#tracingGifsK").hide();
+					$("#tracingGifsL").hide();
+					$("#tracingGifsM").hide();
+					break;
+				case 'e':
+					$("#tracingGifsA").hide();
+					$("#tracingGifsB").hide();
+					$("#tracingGifsC").hide();
+					$("#tracingGifsD").hide();
+					$("#tracingGifsE").show();
+					$("#tracingGifsI").hide();
+					$("#tracingGifsO").hide();
+					$("#tracingGifsU").hide();
+					$("#tracingGifsK").hide();
+					$("#tracingGifsL").hide();
+					$("#tracingGifsM").hide();
+					break;
+				case 'i':
+					$("#tracingGifsA").hide();
+					$("#tracingGifsB").hide();
+					$("#tracingGifsC").hide();
+					$("#tracingGifsD").hide();
+					$("#tracingGifsE").hide();
+					$("#tracingGifsI").show();
+					$("#tracingGifsO").hide();
+					$("#tracingGifsU").hide();
+					$("#tracingGifsK").hide();
+					$("#tracingGifsL").hide();
+					$("#tracingGifsM").hide();
+					break;
+				case 'o':
+					$("#tracingGifsA").hide();
+					$("#tracingGifsB").hide();
+					$("#tracingGifsC").hide();
+					$("#tracingGifsD").hide();
+					$("#tracingGifsE").hide();
+					$("#tracingGifsI").hide();
+					$("#tracingGifsO").show();
+					$("#tracingGifsU").hide();
+					$("#tracingGifsK").hide();
+					$("#tracingGifsL").hide();
+					$("#tracingGifsM").hide();
+					break;
+				case 'u':
+					$("#tracingGifsA").hide();
+					$("#tracingGifsB").hide();
+					$("#tracingGifsC").hide();
+					$("#tracingGifsD").hide();
+					$("#tracingGifsE").hide();
+					$("#tracingGifsI").hide();
+					$("#tracingGifsO").hide();
+					$("#tracingGifsU").show();
+					$("#tracingGifsK").hide();
+					$("#tracingGifsL").hide();
+					$("#tracingGifsM").hide();
+					break;
+				case 'k':
+					$("#tracingGifsA").hide();
+					$("#tracingGifsB").hide();
+					$("#tracingGifsC").hide();
+					$("#tracingGifsD").hide();
+					$("#tracingGifsE").hide();
+					$("#tracingGifsI").hide();
+					$("#tracingGifsO").hide();
+					$("#tracingGifsU").hide();
+					$("#tracingGifsK").show();
+					$("#tracingGifsL").hide();
+					$("#tracingGifsM").hide();
+					break;
+				case 'l':
+					$("#tracingGifsA").hide();
+					$("#tracingGifsB").hide();
+					$("#tracingGifsC").hide();
+					$("#tracingGifsD").hide();
+					$("#tracingGifsE").hide();
+					$("#tracingGifsI").hide();
+					$("#tracingGifsO").hide();
+					$("#tracingGifsU").hide();
+					$("#tracingGifsK").hide();
+					$("#tracingGifsL").show();
+					$("#tracingGifsM").hide();
+					break;
+				case 'm':
+					$("#tracingGifsA").hide();
+					$("#tracingGifsB").hide();
+					$("#tracingGifsC").hide();
+					$("#tracingGifsD").hide();
+					$("#tracingGifsE").hide();
+					$("#tracingGifsI").hide();
+					$("#tracingGifsO").hide();
+					$("#tracingGifsU").hide();
+					$("#tracingGifsK").hide();
+					$("#tracingGifsL").hide();
+					$("#tracingGifsM").show();
+					break;
+		}
 		</script>
 	</body>
 </html>
