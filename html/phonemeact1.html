@@ -36,16 +36,37 @@ Cruz, Beatriz Francesca
 			<h1 id = "activitytext">Activity Time!</h1>
 				<img src="img/others/sun.png" id="sunimg"/>
 		</div>
+		
+		<ol>
+			Activity Flow:
+			<li>Trace Letter</li>
+			<li>Find words that start with Letter</li>
+			<li>Coloring Activity</li>
+		</ol>
 	
 		<div id="controlBar">
 			<div id="effectControlsWrapper">
-				<a href="phonemeact2.html"><button id="coloringact" class="effectButton"><img src="img/controlIcons/pictures.png"/></button></a>
 				<a href="phonemeact3.html"><button id="tracingact" class="effectButton"><img src="img/controlIcons/pencil.png"/></button></a>
 				<a href="phonemeact4.html"><button id="tracingact" class="effectButton"><img src="img/controlIcons/solidLetter.png"/></button></a>
+				<a href="phonemeact2.html"><button id="coloringact" class="effectButton"><img src="img/controlIcons/pictures.png"/></button></a>
+			</div>
+			<div id = "navigationControlsWrapper">
+				<button id="tracingact" class="effectButton" onclick="changeImage()"><img src="img/controlIcons/refresh.png"/></button>
 			</div>
 		</div>
 	
 		<script>
+			var changeImageCtr = 0;
+			function changeImage(){
+				changeImageCtr++;
+				if(changeImageCtr % 2){
+					$("#activitytitle").html(" <h1 id = 'activitytext'>Activity Time!</h1> <img src='img/others/pencil and paper.png' /> "); 
+				}
+				else{
+					$("#activitytitle").html(" <h1 id = 'activitytext'>Activity Time!</h1> <img src='img/others/sun.png' /> "); 
+				}
+			}
+		
 			$(".menuButtonIcon").click(function menuDropdown(){
 				if($("#dropdownList").css("display") == "none"){
 						$("#dropdownList").css("display","block");
